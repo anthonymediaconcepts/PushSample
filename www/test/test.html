@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+    </head>
+    <body>
+        
+        <div id="container">
+            
+        </div>  <!-- end container -->  
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
+        <script type="text/javascript" src="js/vendor/underscore.js" ></script>  
+        <script type="text/javascript" src="js/backbone/backbone-min.js"></script>
+        <script type="text/javascript" src="js/backbone/backbone.localStorage.js"></script>
+        <script type="text/javascript" src="js/vendor/handlebars.js"></script>
+        
+        <script id="entry-template" type="text/x-handlebars-template">
+        <div class="entry">
+          <h1>{{title}}</h1>
+          <div class="body">
+              {{{body}}}
+          </div>
+        </div>
+            ====================
+        </script>    
+        
+        <script id="entry-list-template" type="text/x-handlebars-template">
+        <div class="entry">
+            {{#each people}}
+            <p><b>{{firstName}}</b> {{lastName}}</p>
+            {{/each}}
+        </div>
+            ====================
+        </script>
+        
+        <script id="entry-post-template" type="text/x-handlebars-template">
+        <div class="post">
+          <h1>By {{fullName author}}</h1>
+          <div class="body">{{body}}</div>
+
+          <h1>Comments</h1>
+
+          {{#each comments}}
+          <h2>By {{fullName author}}</h2>
+          <div class="body">{{body}}</div>
+          {{/each}}
+        </div>
+        </script>
+        
+        <script type="text/javascript">
+        
+        var context3 = {
+          author: {firstName: "Alan", lastName: "Johnson"},
+          body: "I Love Handlebars",
+          comments: [{
+            author: {firstName: "Yehuda", lastName: "Katz"},
+            body: "Me too!"
+          }]
+        };
+
+        Handlebars.registerHelper('fullName', function(person) {
+          return person.firstName + " " + person.lastName;
+        });
+            
+        var peopleArr = {
+          people: [
+            {firstName: "Yehuda", lastName: "Katz"},
+            {firstName: "Carl", lastName: "Lerche"},
+            {firstName: "Alan", lastName: "Johnson"}
+          ]
+        };
+            
+        var buttonArr = {
+          items: [
+            {name: "Handlebars", emotion: "love"},
+            {name: "Mustache", emotion: "enjoy"},
+            {name: "Ember", emotion: "want to learn"}
+          ]
+        };
+        
+        var source   = $("#entry-template").html();
+        var template = Handlebars.compile(source);
+            
+        var context = {title: "My New Post", body: "This is my <b>first</b> post!"}
+        var html = template(context);   
+        
+        var source2 = $("#entry-list-template").html();
+        var template2 = Handlebars.compile(source2);
+        
+        var html2 = template2(peopleArr);
+            
+        var source3 = $("#entry-post-template").html();
+        var template3 = Handlebars.compile(source3);
+        
+        var html3 = template3(context3);
+            
+    
+        
+            
+            
+        $(function() {
+            $("#container").append(html);
+            $("#container").append(html2);
+             $("#container").append(html3);
+                
+        });
+            
+        </script>
+    </body>
+</html>

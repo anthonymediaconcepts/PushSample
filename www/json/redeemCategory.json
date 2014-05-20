@@ -1,0 +1,36 @@
+[
+	{ 	
+        "catId" : "C1",
+		"catName" : "Mini Bar",
+		"title" : "Mini Bar" ,
+		"description" : "",
+		"img" :{
+			"src" : "../img/loyalty/heineken.jpg",
+			"alt" : "Mini Bar"
+		},
+		"subList" : "minibar_list"
+		
+	},
+	{ 	
+        "catId" : "C2",
+		"catName" : "Food &amp; Beverages",
+		"title" : "Food &amp; Beverages" ,
+		"description" : "",
+		"img" :{
+			"src" : "../img/loyalty/meal3.jpg",
+			"alt" : "Food &amp; Beverages"
+		},
+		"subList" : "foodbeverages_list"
+	},
+	{ 	
+        "catId" : "C3",
+		"catName" : "Spa Package",
+		"title" : "Spa Package" ,
+		"description" : "",
+		"img" :{
+			"src" : "../img/loyalty/spa2.jpg",
+			"alt" : "Spa Package"
+		},
+		"subList" : "spa_list"
+	}
+]

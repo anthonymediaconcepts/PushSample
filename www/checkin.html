@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->       
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <title>Check In</title>
+    </head>
+    <body class="account">
+        <div data-role="page" class="app page-content has-iScroll hasiScroll" id="signUp">
+        <div data-role="header" id="header">	
+            <div id="content-header"> 
+            <!--START COMPONENT:1388 (7ms) -->
+            
+            <div class="frontdesk" id="logo"><a href="index.html" class="logoLink" data-direction="reverse" data-transition="flip"><img src="img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+            <nav class="frontdesk" id="nav-mini">
+            <h2 class="hidden">Main Navigation</h2>
+            <a href="#content-header" class="hidden">Skip navigation</a>
+            <ul class="nav nav-pills ">
+              <li class="nav-back"><a class="icon-large icon-back" href="index.html" data-rel="back" data-transition="flip">Back</a></li>
+              <li class="nav-menu "><a class="icon-large icon-grid icon-menu" href="index.html" data-direction="reverse" data-transition="flip">Menu2</a></li>
+              <li class="nav-account nav-right"><a class="icon-large icon-account" href="myaccount.html" data-direction="reverse" data-transition="flip">My Account</a></li>
+            </ul>
+            </nav>
+            <div class="frontdesk-logged-in hidden">
+            <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+            <ul class="user-options">
+              <li><a href="#" onClick="logout();" class="jsLogout" title="Logout">Logout</a></li>
+              <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+            </ul>
+            </div>
+            <!--END COMPONENT:1388--> 
+            </div>
+		</div>
+
+		<div data-role="content" id="container">
+        	<div id="main">  
+                <div id="content-center">    
+                <div class="menu widget-container" id="widget-container-wrapper">
+                <h2 class="article-head frontdesk-head">Welcome to Front Desk</h2>
+                <div id="pull-to-refresh-myAccount" class="pRefresh">
+                 <div class="pull-to-refresh-content">
+                    <div id="pullDown-myAccount" class="pDown invisible"> </div>
+                        
+                <!--START COMPONENT:1393 (34ms) -->        
+                    <!--<div class="banner home-banner-screen">
+                    <div class="homepage home-screen-content inner">
+                      <div class="image"><img src="img/frontdesk-myaccount-banner.jpg" alt="" title=""></div>
+                      <h2 class="content-title"><span>Check In</span></h2>
+                    </div>
+                    </div>-->
+                <!--END COMPONENT:1393--> 
+                
+                <!--START COMPONENT:1373 (8ms) -->
+                   <div id="myaccount-page" class="frontdesk-content content content-block">
+                       
+                     <h1>Check-in to continue using our app.</h1>
+                     <p>Provide your Booking Number and your Last Name and we will check-in.</p>
+                       
+                     <p class="hidden form-info form-help-block-big">Please enter your email address and password</p>
+                
+                     <form id='MyAccountForm' method='post' name='MyAccountForm' action='/jasmine3.0/jsps/frontdesk/phonegap/authenticate.jsp?bookingcode=' class='form-horizontal'>
+                  <input type='hidden' name='FormPosted_MyAccountForm' value='Yes' />
+                  <input type='hidden' name='FormPosted' value='Yes' />
+                  <div id='formErrors_MyAccountForm' class='formErrors'></div>
+                  <fieldset>
+                    <ul class="form-field-list">
+                      
+                        <li class="form-field">
+                        <label class='label_BookingReference_MyAccountForm  mandatoryField' title='Mandatory field' for='BookingReference_MyAccountForm'>Booking Reference No</label>
+                        <input name='BookingReference_MyAccountForm'  type='number' pattern="\d*" id='BookingReference_MyAccountForm' class='required' placeholder='Booking Reference No' value="" />
+                      </li>
+                        
+                        <li class="form-field">
+                        <label class='label_LastName_MyAccountForm  mandatoryField' title='Mandatory field' for='LastName_MyAccountForm'>Last Name</label>
+                        <input name='LastName_MyAccountForm'  type='text' id='LastName_MyAccountForm' class='required' placeholder='Last Name' value="" />
+                      </li>
+                      
+                        <li class="form-field hidden">
+                        <label class='label_UserName_MyAccountForm  mandatoryField' title='Mandatory field' for='UserName_MyAccountForm'>Email Address </label>
+                        <input name='UserName_MyAccountForm'  type='email' id='UserName_MyAccountForm' class='required' placeholder='Email Address' value="maan162@yahoo.com" />
+                      </li>
+                      <li class="form-field hidden">
+                        <label class='label_Password_MyAccountForm  mandatoryField' title='Mandatory field' for='Password_MyAccountForm'>Password </label>
+                        <input name='Password_MyAccountForm'  type='password' id='Password_MyAccountForm' class='required' placeholder='Password' value="password" />
+                      </li>
+                        
+                      <!--<li class="form-field">
+                        <label class='label_MobileNumber_MyAccountForm ' for='MobileNumber_MyAccountForm'>Mobile Number </label>
+                        <input name='MobileNumber_MyAccountForm'  type='tel' id='MobileNumber_MyAccountForm' placeholder='Mobile Number' value="" />
+                        <span class="form-help">The mobile number should be in the format +Country Number</span></li>-->
+                      <li class="form-field checkbox hidden"> <span class='checkbox_wrap'>
+                        <input name='KeepLoggedIn_MyAccountForm'  type='checkbox' id='KeepLoggedIn_MyAccountForm' value="Yes" />
+                        </span>
+                        <label class='label_KeepLoggedIn_MyAccountForm ' for='KeepLoggedIn_MyAccountForm'>Keep me logged in </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <div class="form-submit form-actions">
+                    <input name='ProceedButton_MyAccountForm'  type='submit' id='ProceedButton_MyAccountForm' class='btn btn-submit' onclick='this.checked=true; ' value="Check In" />
+                    <!--<p>Not a member?</p>-->
+                    <a href="frontdesk/myaccount.html" class="btn btn-link" data-transition="slide">Login</a></div>
+                  <input type="hidden" name="javaScriptStatus" value="off" class='javaScriptStatus' />
+                </form>
+                
+                    </div>
+                <!--END COMPONENT:1373--> 
+                	<div id="pullUp-myAccount" class="pUp invisible"></div>
+                    </div>
+               	</div>
+                </div>
+            
+            
+            
+                </div>
+			</div>
+		</div>
+		</div><!-- end page -->
+        
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/updateStyling.css">
+        <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+        <script src="js/plugins/jquery/jquery-1.9.1.min.js"></script>
+        <script src="js/plugins/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>
+                   
+		<script type="text/javascript" src="js/jasmine/jQuerySupportingFunctionsForjQuery1.7.js"></script>        
+		<script type="text/javascript" src="js/jasmine/html5support.js"></script>
+    	<script type="text/javascript" src="js/plugins/iscroll.js"></script> 
+	    <script type="text/javascript" src="js/jasmine/frontdeskUtils.js"></script>
+        <script type="text/javascript" src="js/phonegap.js"></script>
+		
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->       
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <title>Jasmine Front Desk</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/updateStyling.css">
+        <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body class="home" >
+        <div data-role="page" class="app page-content pullToRefresh" id="homepage">
+            <div data-role="header" id="header">
+            
+            	<div id="content-header"> 
+                <!--START COMPONENT:1388 (6ms) -->    
+                <div class="home frontdesk" id="logo"><a href="index.html" class="logoLink" ><img src="img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+                <nav class="home frontdesk" id="nav-mini">
+                  <h2 class="hidden">Main Navigation</h2>
+                  <a href="#content-header" class="hidden">Skip navigation</a>
+                  <ul class="nav nav-pills active">
+                    <li class="nav-menu "><a class="icon-large icon-grid icon-menu" href="index.html" >Menu</a></li>
+                    <li class="nav-account nav-right hidden "><a class="icon-large icon-account" href="myaccount.html" data-transition="flip">My Account</a></li>
+                  </ul>
+                </nav>
+                <div class="frontdesk-logged-in hidden">
+                  <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+                  <ul class="user-options">
+                    <li><a href="#" onClick="logout();" title="Logout">Logout</a></li>
+                    <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+                  </ul>
+                </div>
+                <!--END COMPONENT:1388--> 
+              </div>
+  
+            </div>
+            
+            <div data-role="content" id="container">
+
+				<div id="main">  
+                	<div id="content-center">                
+                        
+                        <div class="menu widget-container">
+                          <h2 class="article-head frontdesk-head">Welcome to Front Desk</h2>
+                          <div id="pull-to-refresh">
+                            <div class="pull-to-refresh-content">
+                              <div id="pullDown" class="invisible"> <span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span> </div>
+                              <div class="banner home-banner-screen">
+                                <div class="homepage home-screen-content inner">
+                                  <div class="image"><img src="css/img/homepage-banner-02.jpg" alt="" title=""></div>
+                                  <h2 class="hidden"><span>Welcome to Guoman Front Desk</span></h2>
+                                </div>
+                              </div>
+                                
+                              <nav id="nav-frontdesk" class="frontdesk-content widget"></nav>
+                              
+                              <div id="pullUp" class="invisible"></div>
+                            </div>
+                          </div>
+                          <!--END COMPONENT:1333--> 
+                        </div>
+					</div>
+            
+				</div>
+			</div>
+ 
+        </div> <!-- end page -->
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>        
+        <script type="text/javascript">
+            app.initialize();
+        </script>        
+        <script src="js/plugins/jquery/jquery-1.9.1.min.js"></script>
+        <script src="js/plugins/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>        
+        <script type="text/javascript" src="js/jasmine/html5support.js"></script>        
+        <script type="text/javascript" src="js/jasmine/jQuerySupportingFunctionsForjQuery1.7.js"></script>	
+    	<script type="text/javascript" src="js/plugins/iscroll.js"></script> 
+	    <script type="text/javascript" src="js/jasmine/frontdeskUtils.js"></script>
+        <script type="text/javascript" src="js/jasmine/ajaxUtils.js"></script>
+        <!--<script type="text/javascript" src="js/google/google-map-api.js"></script> -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=en&libraries=weather,places"></script>
+		<script type="text/javascript" src="js/phonegap.js"></script>
+		<script type="text/javascript">
+		
+		$(function() {			
+			
+			$("#homepage .icon-grid").click(function(event) {
+				event.preventDefault();
+				showWidgetNav();
+				
+			});
+			
+			if ( window.localStorage.getItem("username") != null )
+				{
+				uxn = window.localStorage.getItem("uxn");	
+				uxp = window.localStorage.getItem("uxp");
+				$(".icon-grid.icon-menu").removeClass("hidden");
+			
+				loadMessageData();
+			}
+			
+		});
+		
+		var refreshTime = 60000;
+	
+		var myScroll,
+			pullDownEl, pullDownOffset,
+			generatedCount = 10;
+			
+			$('.pullDownIcon').html('&#xe615;');
+			function pullDownAction () {
+			setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+				loadMessageData();
+				myScroll.refresh();// Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		
+	
+		</script> 
+		<script type="text/javascript" src="js/google/jsapi.js"></script>
+        <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>-->
+		<script type="text/javascript" src="js/jasmine/googleJQueryVisualizationHelper.js"></script>
+		<script type="text/javascript">
+			google.load('visualization', '1', {'packages': ['table', 'map']});
+		</script>
+        <script type='text/javascript' src='js/jasmine/data/component_1285.js'></script>
+		<script type='text/javascript' src='js/jasmine/data/component_1284.js'></script>                                
+        <script type="text/javascript" src="js/jasmine/googlemap-util.js"></script>
+        <script type="text/javascript" src="js/jasmine/locate.js"></script>
+        <script type="text/javascript" src="js/jasmine/init.js"></script>
+        <script type="text/javascript" src="js/jasmine/infobox.js"></script>
+        <script type="text/javascript" src="js/addCartFunction.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/bootstrap.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap-modal.js"></script>
+        
+        <script type="text/javascript" src="js/vendor/underscore.js" ></script>  
+        <script type="text/javascript" src="js/backbone/backbone-min.js"></script>
+        <script type="text/javascript" src="js/backbone/backbone.localStorage.js"></script>
+        <script type="text/javascript" src="js/vendor/handlebars.js"></script>
+                
+        <script id="entry-menu-template" type="text/x-handlebars-template">        
+          <ul class="nav nav-list nav-list-frontdesk">  
+              {{#each navigation}}
+              <li id="{{id}}"><a data-transition="{{slideType}}" href="{{uri}}" title="{{title}}" class="ui-link"><i class="icon  {{iconClass}}"></i> <span class="title">{{title}}</span></a></li>
+              {{/each}}
+          </ul>
+        </script>
+        
+        <script type="text/javascript">
+        var menuArrData = {
+            navigation :[
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"About Jasmine Hotel", iconClass:"icon-info"},
+                {id:"", slideType:"slide", uri:"pages/rooms.html", title:"Rooms & Suites", iconClass:"icon-bed1"},
+                {id:"", slideType:"slide", uri:"pages/restaurants.html", title:"Restaurants & Bars", iconClass:"icon-coffee"},
+                {id:"", slideType:"slide", uri:"pages/facilities.html", title:"Facilities", iconClass:"icon-refrigerator"},
+                {id:"", slideType:"slide", uri:"pages/find_my_way.html", title:"Find My Way", iconClass:"icon-location"},
+                {id:"", slideType:"slide", uri:"pages/weather.html", title:"Weather", iconClass:"icon-cloudy"},
+                {id:"", slideType:"slide", uri:"pages/offers.html", title:"Promotions", iconClass:"icon-gift"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Rooms Service", iconClass:"icon-food"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Front Desk", iconClass:"icon-key"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Contact Us", iconClass:"icon-phone"},
+            ]
+        };
+        
+        var context = menuArrData; 
+        var template = Handlebars.compile($("#entry-menu-template").html());        
+        var strHtml = template(context);
+        
+            $("#nav-frontdesk").append(strHtml);    
+        
+        </script>
+        
+    </body>
+</html>

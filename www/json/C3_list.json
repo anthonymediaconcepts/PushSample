@@ -1,0 +1,46 @@
+[
+	{ 	
+        "code" : "S111",
+		"title" : "Rejuvenating Facial",
+		"description" : "60-minute facial that includes cleansing, exfoliation and gentle massage to relax and improve circulation, finished with a hydrating mask.",
+		"img" :{
+			"src" : "../img/loyalty/spa1.jpg",
+			"alt" : "Spa Package 1",
+			"largeImg": "../img/loyalty/spa1-large.jpg"
+		},
+		"points" : "180"	
+	},
+	{ 	
+        "code" : "S112",
+		"title" : "Aromatherapy Massage",
+		"description" : "60-minute gentle massage with choice of essential oils to boost well-being, relieve stress or induce relaxation.",
+		"img" :{
+			"src" : "../img/loyalty/spa2.jpg",
+			"alt" : "Spa Package 2",
+			"largeImg": "../img/loyalty/spa2-large.jpg"
+		},
+		"points" : "180"	
+	},
+	{ 	
+        "code" : "S113",
+		"title" : "Body Scrub and Wrap",
+		"description" : "60-minute treatment to relax the body and mind including a body scrub and wrap using oriental herbs.",
+		"img" :{
+			"src" : "../img/loyalty/spa3.jpg",
+			"alt" : "Spa Package 3",
+			"largeImg": "../img/loyalty/spa3-large.jpg"
+		},
+		"points" : "200"	
+	},
+	{ 	
+        "code" : "S114",
+		"title" : "Pedicure",
+		"description" : "60-minute pedicure to pamper your feet and give your toenails a natural shine. Wide range of colours from OPI to choose from.",
+		"img" :{
+			"src" : "../img/loyalty/spa4.jpg",
+			"alt" : "Spa Package 4",
+			"largeImg": "../img/loyalty/spa4-large.jpg"
+		},
+		"points" : "250"	
+	}
+]

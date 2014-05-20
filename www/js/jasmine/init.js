@@ -120,14 +120,13 @@
 		});	
 	}  
 	function initializeMap() {
-		
 		var DEBUG = true;
 		var defaultBounds = new google.maps.LatLngBounds(
 							new google.maps.LatLng(landing_center_lat, landing_center_lng));
 							
 		//myOptions found in googlemap-util.js
 		if($("#map_canvas").length > 0) {
-		
+            
 			map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 			
 			if(enableFullScreen){
@@ -194,10 +193,12 @@
 						searchBox.setBounds(bounds);
 					});	
 				}
-			} catch(e) {}
-			
+			} catch(e) {
+                aler("error:"+e);
+            }
+			//alert( g_domain+"/application/components_jsp/google_markers_JSON.jsp?pid="+propPID+"&landing="+landing+"&docid="+docid  ) ;
+            
 			$.getJSON(g_domain+"/application/components_jsp/google_markers_JSON.jsp?pid="+propPID+"&landing="+landing+"&docid="+docid, function(data){
-				
 				
 				mapData = data;
 				markerGroups[mapOptions.markerHotel]=new Array();
@@ -246,9 +247,12 @@
 					} catch(e) {}
 					
 					var contentString = contentHead + '<h3 class="firstHeading">'+item.title+'</h3>';
-							
+					
+                    
+                    console.log("its a hotel:"+ item.type);
+                    
 					if(item.type == "Hotel") {
-						
+						console.log("its a hotel");
 						firstMarkerToShow = marker;
 						//firstMarkerString = contentString;
 					
@@ -284,7 +288,7 @@
 							ib = new InfoBox(infoOptions);
 							ib.setPosition(location);
 							ib.open(map, marker);
-						
+						console.log("location:"+location);
 						map.setCenter( location );
 						
 					});

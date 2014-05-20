@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Handlerbar Test Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+    </head>
+    <body>
+        
+        <div id="container">
+            
+        </div>  <!-- end container -->  
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
+        <script type="text/javascript" src="js/vendor/underscore.js" ></script>  
+        <script type="text/javascript" src="js/backbone/backbone-min.js"></script>
+        <script type="text/javascript" src="js/backbone/backbone.localStorage.js"></script>
+        <script type="text/javascript" src="js/vendor/handlebars.js"></script>
+        
+        <script id="entry-page-template" type="text/x-handlebars-template">
+        <div class="page">
+          {{#if pageDetails.title}}
+          <h1>{{pageDetails.title}}</h1>
+            {{{bannerDefault pageDetails}}}
+          <div class="body">{{{pageDetails.body}}}</div>
+          {{/if}}
+        </div>
+        </script>
+        
+        <script id="entry-menu-template" type="text/x-handlebars-template">
+        <div class="post">
+          <h1>Main Navigation</h1>
+          <nav class="body">
+          <ul class="nav nav-list nav-list-frontdesk">  
+              {{#each navigation}}
+              <li id="{{id}}"><a data-transition="{{slideType}}" href="{{uri}}" title="{{title}}" class="ui-link"><i class="icon  {{iconClass}}"></i> <span class="title">{{title}}</span></a></li>
+              {{/each}}
+          </ul>
+          </nav>
+        </div>
+        </script>
+        
+        <script type="text/javascript">
+        
+        Handlebars.registerHelper('bannerDefault', function(context) {
+          return "<img src="+context.bannerURL+" alt="+context.title+" title="+context.title+" />";
+        }); 
+            
+        var menuArrData = {
+            navigation :[
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"About Jasmine Hotel", iconClass:"icon-info"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Rooms & Suites", iconClass:"icon-bed1"}
+            ]
+        };
+        
+        //var context = menuArrData; 
+        //var template = Handlebars.compile($("#entry-menu-template").html());        
+        //var strHtml = template(context);
+            
+        var pageArrData = {
+            pageDetails: {
+                title: "Find My Way Title",
+                body: "<p> Fusce in auctor libero, nec pellentesque leo. Mauris placerat a metus non porta. Aliquam euismod iaculis nibh, sed tincidunt libero tempor vitae. Donec est massa, convallis eget lacus vitae, ultricies accumsan eros. Maecenas euismod sed nunc eu porta. Aenean tortor leo, fermentum quis est eget, tempus semper dui. Vivamus consectetur nisi vel tortor gravida, nec mattis velit pellentesque. Praesent lacinia nisl non augue pretium tristique. Sed non arcu turpis. Donec eu placerat nulla. Donec sollicitudin nec urna nec condimentum. Suspendisse potenti.</p> "+
+    "<p> <strong>For guests arriving in Singapore by bus&hellip;</strong></p>"+
+    "<p> Nunc convallis feugiat ultricies. Sed mattis tellus et quam aliquam euismod sit amet eu tortor. Cras ullamcorper nulla id quam tincidunt, tempor eleifend lorem elementum. Donec elementum urna ut dolor commodo, eget tincidunt libero rhoncus. Duis venenatis sapien at diam blandit euismod. Morbi rhoncus condimentum tellus, a imperdiet dolor porttitor sed. Vestibulum tincidunt elementum nisi sed mollis. Praesent in turpis massa. Mauris tempor aliquet pharetra.</p>",
+                bannerURL: "../img/frontdesk-findway.jpg" 
+            }
+        };
+            
+        var context = pageArrData; //someArrData;
+        var template = Handlebars.compile($("#entry-page-template").html());        
+        var strHtml = template(context);    
+        
+        
+        $("#container").append(strHtml);    
+        
+    Person = Backbone.Model.extend({
+        defaults: {
+            name: 'Fetus',
+            age: 0,
+            child: ''
+        },
+        initialize: function(){
+            alert("Welcome to this world");
+        }
+    });
+    
+    var person = new Person({ name: "Thomas", age: 67, child: 'Ryan'});
+    
+    var age = person.get("age"); // 67
+    var name = person.get("name"); // "Thomas"
+    var child = person.get("child"); // 'Ryan'
+    
+
+            
+            
+        </script>
+    </body>
+</html>

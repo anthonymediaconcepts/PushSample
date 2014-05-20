@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->       
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Jasmine Front Desk</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/updateStyling.css">
+        <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body class="home" >
+        <div data-role="page" class="app page-content pullToRefresh" id="homepage">
+            <div data-role="header" id="header">
+            
+            	<div id="content-header"> 
+                <!--START COMPONENT:1388 (6ms) -->    
+                <div class="home frontdesk" id="logo"><a href="index.html" class="logoLink" ><img src="img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+                <nav class="home frontdesk" id="nav-mini">
+                  <h2 class="hidden">Main Navigation</h2>
+                  <a href="#content-header" class="hidden">Skip navigation</a>
+                  <ul class="nav nav-pills ">
+                    <li class="nav-menu "><a class="icon-large icon-grid icon-menu hidden" href="index.html" >Menu</a></li>
+                    <li class="nav-account nav-right"><a class="icon-large icon-account" href="myaccount.html" data-transition="flip">My Account</a></li>
+                  </ul>
+                </nav>
+                <div class="frontdesk-logged-in hidden">
+                  <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+                  <ul class="user-options">
+                    <li><a href="#" onClick="logout();" title="Logout">Logout</a></li>
+                    <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+                  </ul>
+                </div>
+                <!--END COMPONENT:1388--> 
+              </div>
+  
+            </div>
+            
+            <div data-role="content" id="container">
+
+				<div id="main">  
+                	<div id="content-center">                
+                        <div class="home-screen ">
+                          <div class="home-screen-container">
+                            <div class="home-screen-content">
+                              <h2>Welcome to Front Desk</h2>
+                              <a class="btn" href="myaccount.html" title="Check In" data-transition="flip">Check in</a>
+                              <div class="help-con"> <a class="help-link" href="#">
+                                <icon class="icon icon-help"></icon>
+                                <span>Learn more about the App</span></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="menu widget-container hidden">
+                          <h2 class="article-head frontdesk-head">Welcome to Front Desk</h2>
+                          <div id="pull-to-refresh">
+                            <div class="pull-to-refresh-content">
+                              <div id="pullDown" class="invisible"> <span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span> </div>
+                              <div class="banner home-banner-screen">
+                                <div class="homepage home-screen-content inner">
+                                  <div class="image"><img src="img/homepage-banner.jpg" alt="" title=""></div>
+                                  <h2 class="hidden"><span>Welcome to Guoman Front Desk</span></h2>
+                                </div>
+                              </div>
+                              <nav id="nav-frontdesk" class="frontdesk-content widget">
+                                <h2 class="hidden">Front Desk Navigation</h2>
+                                <ul class="nav nav-list nav-list-frontdesk">
+                                  <li id=""><a data-transition="slide" href="frontdesk/frontdesk_menu.html" title="Front Desk"><i class="icon icon-frontdesk icon-mybill"></i> <span class="title">Front Desk</span></a></li>
+                                  <!--<li id=""><a data-transition="slide" href="frontdesk/checkin_list.html" title="Check-in"><i class="icon icon-key icon-checkin"></i> <span class="title">Check-in</span></a></li>-->
+                                  <li id=""><a data-transition="slide" href="frontdesk/messages.html" title="My Messsages"><i class="icon icon-bubble icon-message"></i> <span class="title">My Messsages <span class="badge count">0</span><span class="tip"></span></span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/housekeeping.html" title="House Keeping"><i class="icon icon-sweeper icon-housekeeping"></i> <span class="title">House Keeping</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/concierge.html" title="Concierge"><i class="icon icon-bell icon-concierge"></i> <span class="title">Concierge</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/findmyway/index.html" title="Find My Way"><i class="icon icon-beacon icon-myway"></i> <span class="title">Find My Way</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/room_service.html" title="Room Service"><i class="icon icon-maid icon-roomservice"></i> <span class="title">Room Service</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/facilities.html" title="Facilities"><i class="icon icon-maid icon-facilities"></i> <span class="title">Facilities</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/maintenance.html" title="Maintenance"><i class="icon icon-maid icon-maintenance"></i> <span class="title">Maintenance</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/loyalty.html" title="Loyalty"><i class="icon icon-maid icon-loyalty"></i> <span class="title">Loyalty</span></a></li>
+                                </ul>
+                              </nav>
+                              <div id="pullUp" class="invisible"></div>
+                            </div>
+                          </div>
+                          <!--END COMPONENT:1333--> 
+                        </div>
+					</div>
+            
+				</div>
+			</div>
+ 
+        </div> <!-- end page -->
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>        
+        <script type="text/javascript">
+            app.initialize();
+        </script>        
+        <script src="js/plugins/jquery/jquery-1.9.1.min.js"></script>
+        <script src="js/plugins/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>        
+        <script type="text/javascript" src="js/jasmine/html5support.js"></script>        
+        <script type="text/javascript" src="js/jasmine/jQuerySupportingFunctionsForjQuery1.7.js"></script>	
+    	<script type="text/javascript" src="js/plugins/iscroll.js"></script> 
+	    <script type="text/javascript" src="js/jasmine/frontdeskUtils.js"></script>
+        <script type="text/javascript" src="js/jasmine/ajaxUtils.js"></script>
+        <!--<script type="text/javascript" src="js/google/google-map-api.js"></script> -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=en&libraries=weather,places"></script>
+		<script type="text/javascript" src="js/phonegap.js"></script>
+		<script type="text/javascript">
+		
+		$(function() {			
+			
+			$("#homepage .icon-grid").click(function(event) {
+				event.preventDefault();
+				showWidgetNav();
+				
+			});
+			
+			if ( window.localStorage.getItem("username") != null )
+				{
+				uxn = window.localStorage.getItem("uxn");	
+				uxp = window.localStorage.getItem("uxp");
+				$(".icon-grid.icon-menu").removeClass("hidden");
+			
+				loadMessageData();
+			}
+			
+		});
+		
+		var refreshTime = 60000;
+		//var _isLoggedIn = false;
+		//if(_isLoggedIn) setInterval("loadMessageData()", refreshTime);
+				
+		var myScroll,
+			pullDownEl, pullDownOffset,
+			generatedCount = 10;
+			
+			$('.pullDownIcon').html('&#xe009;');
+			function pullDownAction () {
+			setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+				loadMessageData();
+				myScroll.refresh();// Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		
+		//	if($("body").hasClass("has-iScroll"))
+		/*	if($("div:jqmData(role='page')").hasClass("has-iScroll")){
+				document.addEventListener('touchmove', preventDefault, false);
+		}
+
+		function preventDefault(e) { e.preventDefault(); };*/
+		
+		</script> 
+		<script type="text/javascript" src="js/google/jsapi.js"></script>
+        <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>-->
+		<script type="text/javascript" src="js/jasmine/googleJQueryVisualizationHelper.js"></script>
+		<script type="text/javascript">
+			google.load('visualization', '1', {'packages': ['table', 'map']});
+		</script>
+        <script type='text/javascript' src='js/jasmine/data/component_1285.js'></script>
+		<script type='text/javascript' src='js/jasmine/data/component_1284.js'></script>                                
+        <script type="text/javascript" src="js/jasmine/googlemap-util.js"></script>
+        <script type="text/javascript" src="js/jasmine/locate.js"></script>
+        <script type="text/javascript" src="js/jasmine/init.js"></script>
+        <script type="text/javascript" src="js/jasmine/infobox.js"></script>
+        <script type="text/javascript" src="js/addCartFunction.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/bootstrap.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap-modal.js"></script>
+    </body>
+</html>

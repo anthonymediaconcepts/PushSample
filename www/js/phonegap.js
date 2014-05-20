@@ -130,6 +130,13 @@ $( document ).delegate(".page-content", "pageshow", function() {
 	var getFormID = $(this).find("form:eq(0)");
 	var getFormAction = $(getFormID).attr("action");
 	
+	if(getPageID == "bookTaxi" ){
+		$("#SumbitButton_BookTaxiForm").on("click" , function(){
+			window.localStorage.setItem("bookTaxi" , "message");
+			window.localStorage.setItem("bookTaxiBadge" , 1);
+		});
+	}
+
 	if(getPageID == "findMyWay"){
 		$(".icon-find-my-way-back").click(function(){
 			
@@ -156,8 +163,6 @@ $( document ).delegate(".page-content", "pageshow", function() {
 				 	alert("code : " + error.code + '\n' +
                           "message: " + error.message + '\n');
 			});
-
-				
 
 		});
 	}
@@ -261,12 +266,12 @@ $( document ).delegate(".page-content", "pageshow", function() {
 	
 
 	if(getPageID=="homepage") {
+	
 		loaded();
         
         //$(".nav.nav-pills").addClass("active");
 		//$(".home-screen").addClass("hidden");
 		//$(".menu.widget-container").removeClass("hidden");
-		
         //$(".icon-grid.icon-menu").removeClass("hidden");			
 		
         
@@ -307,6 +312,7 @@ $( document ).delegate(".page-content", "pageshow", function() {
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mapapi, s); 	
 		}*/
 		
+        $("#map_canvas").css("height",$(".pRefresh").height()+"px" );
 		
 		if(google.maps) {
 			
@@ -328,7 +334,6 @@ $( document ).delegate(".page-content", "pageshow", function() {
 	$("a.redeemThisItem").on("tap" , redeemPoints);
 	
 });
-
 
 function getItemList(catId){
 	window.localStorage.setItem("selectedCatId" , catId );
@@ -370,15 +375,65 @@ $( document ).delegate(".page-content", "pagebeforeshow", function() {
 		}
 	}
 
-	if(getPageID=="checkout"){
-
+	if(getPageID=="checkout" ){
 		if(window.localStorage.getItem("checkout")){
 			$(".statusMsg.checkout").text("You have already completed checkout");
 			$("#ProceedButton_MyAccountForm").addClass("hidden");
 		}
-
 	}
 
+	if(getPageID == "messages" ){
+		
+		var selectedID = $("ul.nav-tabs").find("li.current").attr("id");
+		$("." + selectedID).removeClass("hidden");
+
+		$("ul.nav-tabs > li").each(function(){
+			$(this).click(function(){
+				$("." + $(this).siblings().attr("id")).hide();
+				$("." + $(this).attr("id")).show();
+			});
+		});
+
+		/*if(window.localStorage.getItem("completedMsg")){
+			$(".myCompleted").find(".no-results").addClass("hidden");
+			$(".myCompleted").find(".message-results").removeClass("hidden");
+			
+		}else{
+			$(".myCompleted").find(".no-results").removeClass("hidden");
+			$(".myCompleted").find(".message-results").addClass("hidden");
+		}*/
+
+		if(window.localStorage.getItem("bookTaxi")){
+			$(".myRequest").find(".no-results").addClass("hidden");
+			$(".myRequest").find(".message-results").removeClass("hidden");
+			$(".myRequest").find(".frontdesk-content").on("click", function(){
+				$.mobile.changePage( "task_details.html", {
+					transition: "slide",
+					reverse: false
+				});
+				//$(".myRequest").find(".enquiry-message.icon-checkmark").show();
+			//	var completedList = window.localStorage.getItem("completedMsg"); 							
+				///window.localStorage.setItem("completedMsg", $(".myRequest").find(".enquiry-message").text());
+				window.localStorage.removeItem("bookTaxiBadge");
+			});
+		}else{
+			$(".myRequest").find(".no-results").removeClass("hidden");
+			$(".myRequest").find(".message-results").addClass("hidden");
+		}
+	}
+
+	if(getPageID == "homepage" ){
+        
+        if( window.localStorage.getItem("username") != null)
+        $("#homepage #logo .logoLink").removeClass("inactive");
+        
+		if(window.localStorage.getItem("bookTaxiBadge")){
+			$(".badge.count").text(window.localStorage.getItem("bookTaxiBadge"));
+		}
+		else{
+			$(".badge.count").text(0);
+		}
+	}
 
 	if(getPageID == "loyaltyRedeem" ){
 		
@@ -483,7 +538,7 @@ $( document ).delegate(".page-content", "pagebeforeshow", function() {
 				$("<li class='form-field'><label class='label_MobileNumber_MyAccountForm ' for='MobileNumber_MyAccountForm'>Mobile Number </label><input name='MobileNumber_MyAccountForm'  type='tel' id='MobileNumber_MyAccountForm' placeholder='Mobile Number' value='"+ mobile +"' /><span class='form-help'>The mobile number should be in the format +Country Number</span></li>").appendTo(ul);
 				$("<li class='form-field checkbox hidden'>  <span class='checkbox_wrap'><input name='KeepLoggedIn_MyAccountForm'  type='checkbox' id='KeepLoggedIn_MyAccountForm' value='Yes' /></span> <label class='label_KeepLoggedIn_MyAccountForm ' for='KeepLoggedIn_MyAccountForm'>Keep me logged in </label></li>").appendTo(ul);
 				var submitDIV = $("<div class='form-submit form-actions'></div>").appendTo(myAccForm);
-				$("<input name='ProceedButton_MyAccountForm'  type='submit' id='ProceedButton_MyAccountForm' class='btn btn-submit' onclick='this.checked=true; ' value='Save &amp; Exit' /><a href='#' onClick='logout();' class='btn btn-link jsLogout'>Log Out</a>").appendTo(submitDIV);
+				$("<!--input name='ProceedButton_MyAccountForm'  type='submit' id='ProceedButton_MyAccountForm' class='btn btn-submit' onclick='this.checked=true; ' value='Save &amp; Exit' /--><a href='#' onClick='logout();' class='btn btn-link jsLogout'>Log Out</a>").appendTo(submitDIV);
 				$("<input type='hidden' name='javaScriptStatus' value='off' class='javaScriptStatus' />").appendTo(myAccForm);
 			}
 		}
@@ -858,34 +913,34 @@ function redirectpage(url)
 	}
 	
 function loadTaskDetails(pageID) 
-	{
+{
 
-		var guestName, roomNumber, taskName, description, status, bookingID, commentsToGuest, eta = "";
-		var thisPageObj = $("#"+pageID);
-				
-		$.getJSON(g_domain+"/jasmine3.0/jsps/frontdesk/phonegap/taskloader.jsp?taskId="+setTID,  function(rtndata) { 
-			$.each(rtndata.points, function(i, item){
-				guestName = item.guestName;
-				roomNumber = item.roomNumber;
-				taskName = item.taskName;
-				description = item.description;
-				status = item.status;
-				bookingID = item.bookingID;
-				commentsToGuest = item.commentsToGuest;
-				eta = item.ETA;	
-			});
+	var guestName, roomNumber, taskName, description, status, bookingID, commentsToGuest, eta = "";
+	var thisPageObj = $("#"+pageID);
 			
-			$(thisPageObj).find("#guest-name .value").html( guestName );
-			$(thisPageObj).find("#guest-room .value").html( "Room "+roomNumber );
-			$(thisPageObj).find(".task-title.content-title").html( taskName );
-			$(thisPageObj).find(".user-comment").html( description );
-			$(thisPageObj).find(".status-con .status").html( status );
-			$(thisPageObj).find("#add-info .value").html( commentsToGuest );
-			$(thisPageObj).find("#task-info .value").html( eta );
-			
-			return true;
-			
+	$.getJSON(g_domain+"/jasmine3.0/jsps/frontdesk/phonegap/taskloader.jsp?taskId="+setTID,  function(rtndata) { 
+		$.each(rtndata.points, function(i, item){
+			guestName = item.guestName;
+			roomNumber = item.roomNumber;
+			taskName = item.taskName;
+			description = item.description;
+			status = item.status;
+			bookingID = item.bookingID;
+			commentsToGuest = item.commentsToGuest;
+			eta = item.ETA;	
 		});
 		
+		$(thisPageObj).find("#guest-name .value").html( guestName );
+		$(thisPageObj).find("#guest-room .value").html( "Room "+roomNumber );
+		$(thisPageObj).find(".task-title.content-title").html( taskName );
+		$(thisPageObj).find(".user-comment").html( description );
+		$(thisPageObj).find(".status-con .status").html( status );
+		$(thisPageObj).find("#add-info .value").html( commentsToGuest );
+		$(thisPageObj).find("#task-info .value").html( eta );
 		
-	};
+		return true;
+		
+	});
+	
+	
+};

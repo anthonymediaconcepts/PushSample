@@ -1,0 +1,46 @@
+[
+	{ 	
+        "code" : "T111",
+		"title" : "Tour 1",
+		"description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8216;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+		"img" :{
+			"src" : "../img/loyalty/tour1.jpg",
+			"alt" : "Tour 1",
+			"largeImg": "../img/loyalty/tour1-large.jpg"
+		},
+		"points" : "250"	
+	},
+	{ 	
+        "code" : "T112",
+		"title" : "Tour 2",
+		"description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8216;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+		"img" :{
+			"src" : "../img/loyalty/tour2.jpg",
+			"alt" : "Tour 2",
+			"largeImg": "../img/loyalty/tour2-large.jpg"
+		},
+		"points" : "300"	
+	},
+	{ 	
+        "code" : "T113",
+		"title" : "Tour 3",
+		"description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8216;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+		"img" :{
+			"src" : "../img/loyalty/tour3.jpg",
+			"alt" : "Tour 3",
+			"largeImg": "../img/loyalty/tour3-large.jpg"
+		},
+		"points" : "200"	
+	},
+	{ 	
+        "code" : "T114",
+		"title" : "Tour 4",
+		"description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8216;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+		"img" :{
+			"src" : "../img/loyalty/tour4.jpg",
+			"alt" : "Tour 4",
+			"largeImg": "../img/loyalty/tour4-large.jpg"
+		},
+		"points" : "250"	
+	}
+]

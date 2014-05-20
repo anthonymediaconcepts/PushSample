@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />      
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <title>Bill Summary Checkout</title>
+    </head>
+    <body>
+        <div data-role="page" class="app page-content jsGmap has-iScroll" id="placesToGo" >
+        
+        <!--Header-->
+        <div data-role="header" id="header" >	
+            <div id="content-header"> 
+
+                <div class="frontdesk" id="logo" ><a href="../../index.html" class="logoLink" data-direction="reverse" data-transition="flip"><img src="../../img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+                    <nav class="frontdesk" id="nav-mini">
+                        <h2 class="hidden">Main Navigation</h2>
+                        <a href="#content-header" class="hidden">Skip navigation</a>
+                        <ul class="nav nav-pills ">
+                          <li class="nav-back"><a class="icon-large icon-back" href="../../index.html" data-rel="back" data-transition="flip" >Back</a></li>
+                          <li class="nav-menu "><a class="icon-large icon-grid icon-menu" href="../../index.html" data-direction="reverse" data-transition="flip">Menu2</a></li>
+                          <li class="nav-account nav-right"><a class="icon-large icon-account" href="../../myaccount.html" data-direction="reverse" data-transition="flip">My Account</a></li>
+                        </ul>
+                    </nav>
+                    <div class="frontdesk-logged-in hidden">
+                        <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+                            <ul class="user-options">
+                              <li><a href="#" onClick="logout();" class="jsLogout" title="Logout">Logout</a></li>
+                              <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+                            </ul>
+                    </div>
+             </div>
+		</div>
+		<!--Header End-->
+
+		<div data-role="content" id="container" >
+        	<div id="main">  
+                <div id="content-center">    
+                    <div id="pull-to-refresh-placesToGo" class="pRefresh">
+                      <div class="pull-to-refresh-content">
+                            <div id="pullDown-placesToGo" class="pDown invisible" ></div>
+
+                            	<!--START COMPONENT:1373 (8ms) -->
+
+								<div class="attractions-places map-content">
+                                    <h2 class="corp-head">Places to go</h2>
+                                    <p>Below are the list of attractions near our property.</p>
+                                </div>
+
+                            <!--END COMPONENT:1373-->
+                              
+                            <!--START COMPONENT:1286 (4ms) -->
+							<section class="list-attractions-place content" >
+                                
+                            <ul class="list-attractions frontdesk-list-attractions">
+                            
+							
+
+                            <li class="attractions list-items" id="merlion" >
+								<h2 class="head list-head">Merlion Park</h2>
+                                <span class="listItem left" >
+                                    <span class="attractions-img" ><img src="../../img/placesToGo/merlionPark.jpg" alt="Merlion Park" title="Merlion Park" border=0 /></span>
+                                </span>
+                                <span class="listItem right" >
+                                    <p>Just in front of Jasmine Hotel is Merlion Park where you'll see the statue which is regarded as Singapore's national icon. The Merlion is a mythical creature with the head of a lion and body of a fish.</p>
+                                </span>
+                            </li>
+                            
+                            <li class="attractions list-items " id="marina" >
+								<h2 class="head list-head">Marina Bay Sands</h2>
+                                <span class="listItem left" >
+                                    <span class="attractions-img" ><img src="../../img/placesToGo/marinaBaySands.jpg" alt="Marina Bay Sands" title="Marina Bay Sands" border=0 /></span>
+                                </span>
+                                <span class="listItem right" >
+                                    <p>Visit Singapore's most iconic complex a short walk or taxi ride away. Complete with a hotel, casino, shops, restaurants and bars, theatre and an ArtScience Museum. The view from the top is a sight not to be missed.</p>
+                                </span>
+                            </li>
+                            
+                            <li class="attractions list-items " id="gardens"  >
+								<h2 class="head list-head">Gardens by the Bay</h2>
+                                <span class="listItem left" >
+                                    <span class="attractions-img" ><img src="../../img/placesToGo/gardenByBay.jpg" alt="Gardens by the Bay" title="Gardens by the Bay" border=0 /></span>
+                                </span>
+                                <span class="listItem right" >
+                                    <p>Spanning 101 hectares, Gardens by the Bay is an integral part of Singapore's vision of creating a City in a Garden. The Gardens comprises three spaces – Bay South, Bay East and Bay Central – and houses over 380 thousand plants. A suspended 128-metre long walkway links 2 of the iconic Supertrees, offering a spectacular view of the Gardens.</p>
+                                </span>
+                            </li>
+                            
+                            <li class="attractions list-items" id="chinatown" >
+								<h2 class="head list-head">Chinatown</h2>
+                                <span class="listItem left" >
+                                    <span class="attractions-img" ><img src="../../img/placesToGo/chinatown.jpg" alt="Chinatown" title="Chinatown" border=0 /></span>
+                                </span>
+                                <span class="listItem right" >
+                                    <p>Experience the buzz by walking through the streets of Chinatown. From old temples and heritage buildings to eclectic shops and a wide range of eateries, the area is especially lively during the Chinese New Year period, usually in January or February.</p>
+                                </span>
+                            </li>
+                            
+                            <li class="attractions list-items" id="india" >
+								<h2 class="head list-head">Little India</h2>
+                                <span class="listItem left" >
+                                    <span class="attractions-img" ><img src="../../img/placesToGo/littleIndia.jpg" alt="Little India" title="Little India" border=0 /></span>
+                                </span>
+                                <span class="listItem right" >
+                                    <p>Immerse yourself in vibrancy of Indian cuisine, merchandise and culture. Around Deepavali (Festival of Light usually around October or November), the place is decorated with lights.</p>
+                                </span>
+                            </li>
+                            
+                            <li class="attractions list-items " id="orchard" >
+								<h2 class="head list-head">Orchard Road</h2>
+                                <span class="listItem left" >
+                                    <span class="attractions-img" ><img src="../../img/placesToGo/orchardRoad.jpg" alt="rchard Road" title="rchard Road" border=0 /></span>
+                                </span>
+                                <span class="listItem right" >
+                                    <p>Orchard Road is known as the most famous shopping area in Singapore. Luxury brands and homegrown brands in several shopping complexes ensure you are spoilt for choice.</p>
+                                </span>
+                            </li>
+                            
+                            </ul>
+                            </section>
+								                                
+                              
+                             <!--END COMPONENT:1286-->
+
+                            <div id="pullUp-placesToGo" class="pUp invisible"></div>
+                        </div><!--pull-to-refresh-content-->
+                    </div><!--pRefresh-->
+                </div>
+			</div><!--main-->
+		</div><!--container-->
+		</div><!-- end page -->
+        
+        <script type="text/javascript" src="../../cordova.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.theme.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">	
+        <script src="../../js/plugins/jquery/jquery-1.9.1.min.js"></script>
+        <script src="../../js/plugins/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>
+                   
+		<script type="text/javascript" src="../../js/jasmine/jQuerySupportingFunctionsForjQuery1.7.js"></script>        
+		<script type="text/javascript" src="../../js/jasmine/html5support.js"></script>
+    	<script type="text/javascript" src="../../js/plugins/iscroll.js"></script> 
+	    <script type="text/javascript" src="../../js/jasmine/frontdeskUtils.js"></script>
+        <script type="text/javascript" src="../../js/phonegap.js"></script>
+        
+    </body>
+</html>

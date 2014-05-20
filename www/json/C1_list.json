@@ -1,0 +1,46 @@
+[
+	{ 	
+        "code" : "A111",
+		"title" : "Heineken Beer",
+		"description" : "A pale lager with 5% alcohol, 375ml. Country of origin: Netherlands.",
+		"img" :{
+			"src" : "../img/loyalty/heineken.jpg",
+			"alt" : "Heineken Beer",
+			"largeImg": "../img/loyalty/heineken-large.jpg"
+		},
+		"points" : "100"	
+	},
+	{ 	
+        "code" : "A112",
+		"title" : "Budweiser Beer",
+		"description" : "A pale lager with 5% alcohol, 375ml. Country of origin: USA.",
+		"img" :{
+			"src" : "../img/loyalty/budweiser2.jpg",
+			"alt" : "Budweiser Beer",
+			"largeImg": "../img/loyalty/budweiser2-large.jpg"
+		},
+		"points" : "150"	
+	},
+	{ 	
+        "code" : "A113",
+		"title" : "Jack Daniels",
+		"description" : "Tennessee whiskey with 40% alcohol, 50ml.",
+		"img" :{
+			"src" : "../img/loyalty/jackdaniels.jpg",
+			"alt" : "Jack Daniels",
+			"largeImg": "../img/loyalty/jackdaniels-large.jpg"
+		},
+		"points" : "200"	
+	},
+	{ 	
+        "code" : "A114",
+		"title" : "Coca Cola",
+		"description" : "Regular coke 375ml.",
+		"img" :{
+			"src" : "../img/loyalty/cocacola.jpg",
+			"alt" : "Coca Cola",
+			"largeImg": "../img/loyalty/cocacola-large.jpg"
+		},
+		"points" : "50"	
+	}
+]

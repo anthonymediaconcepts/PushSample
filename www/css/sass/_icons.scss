@@ -1,0 +1,406 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../css/fonts/icomoon.eot?-p1sv22');
+	src:url('../css/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../css/fonts/icomoon.woff?-p1sv22') format('woff'),
+		url('../css/fonts/icomoon.ttf?-p1sv22') format('truetype'),
+		url('../css/fonts/icomoon.svg?-p1sv22#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+
+    // Better Font Rendering =========== 
+	-webkit-font-smoothing: antialiased;
+} */
+
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon, .icon-large {
+	overflow:hidden;
+	display:block;
+	text-align:center;
+}
+.icon {
+	width:16px;
+	height:16px;
+	line-height:1.15em;
+}
+.icon-large {
+	width:35px;
+	height:50px;
+	line-height:50px;
+	font-size:1.4em;
+	opacity: .6;
+}
+.icon:before,.icon-large:before, .formErrors:before, .no-results:before, .nav-list a:before, .alert-error:before, .message:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	display:block;
+	text-indent:0;
+}
+.icon-maid:before,.icon-maintenance{
+	content: "\e000";
+}
+.icon-key:before {
+	content: "\e001";
+}
+.icon-frontdesk:before {
+	content: "\e002";
+}
+.icon-user:before {
+	content: "\e003";
+}
+.icon-sweeper:before {
+	content: "\e004";
+}
+.icon-help:before {
+	content: "\e005";
+}
+.icon-heart:before {
+	content: "\e006";
+}
+.icon-bell:before {
+	content: "\e007";
+}
+.icon-clock:before {
+	content: "\e017";
+}
+.icon-calendar:before {
+	content: "\e011";
+}
+.icon-bubble:before {
+	content: "\e00a";
+}
+.icon-beacon:before {
+	content: "\e00b";
+}
+.icon-setting:before, .icon-account:before {
+	content: "\e00c";
+}
+.icon-account.online:before {
+	content: "\e003";
+	}
+.icon-menu:before {
+	content: "\e00d";
+}
+.icon-forward:before, .nav-list a:before {
+	content: "\e00e";
+}
+.icon-more , .icon-less{
+	position: absolute;
+	right: 20px;
+	height: 30px;
+	width: 30px;
+	font-size: 1em;
+	color: #e0550e;
+	font-weight: bold;
+}
+.collapsible.expandable .icon-more:before{
+	content: "\e023";
+	}
+.collapsible .icon-less:before {
+	content: "\e022";
+	}
+.icon-back:before {
+	content: "\e00f";
+}
+.icon-key:before {
+	content: "\e001";
+}
+.icon-close:before {
+	content: "\e010";
+}
+.icon-checkmark:before {
+	content: "\e011";
+}
+.icon-minus:before {
+	content: "\e012";
+}
+.icon-plus:before {
+	content: "\e013";
+}
+.icon-info:before, .formErrors:before, .no-results:before, .alert-error:before, .message:before {
+	/*content: "\e018";*/
+	content: "\e623";
+}
+.icon-happy:before {
+	content: "\e02b";
+}
+.icon-smiley:before {
+	content: "\e028";
+}
+.icon-neutral:before {
+	content: "\e029";
+}
+.icon-sad:before {
+	content: "\e02a";
+}
+.icon-confused:before {
+	content: "\e027";
+}
+.icon-spinner:before {
+	content: "\e01a";
+}
+.icon-undo:before {
+	content: "\e01b";
+}
+.icon-redo:before {
+	content: "\e01c";
+}
+.icon-edit:before {
+	content: "\e61e";
+}
+.icon-arrow-down:before {
+	content: "\e000";
+	}
+.icon-remove:before {
+	content: "\e61d";
+}
+.icon-delete:before{
+	content: "\e01b";
+	}
+.icon-update:before{
+	content: "\e010";
+	}
+.icon-roomservice:before{
+	content: "\e020";
+	}
+.icon-facilities:before{
+	content: "\e021";
+	}
+.icon-loyalty:before{
+	content: "\e01f";
+	}
+.icon-show:before{
+	content: "\e019";
+}
+.icon-hide:before{
+	content: "\e01a";
+}
+.weather-type .info:before, .icon-info:before {
+	content: "\e018";
+	}
+
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+
+.icon-back:before {
+	content: "\e60d";
+}
+
+.icon-forward:before, .nav-list a:before {
+	content: "\f054";
+}
+
+.icon-facilities:before {
+	content: "\e608";
+}
+
+.icon-account:before {
+	content: "\e614";
+}
+
+.icon-setting:before, .icon-account:before {
+	content: "\e614";
+}
+.icon-account.online:before {
+	content: "\e614";
+	}
+
+.icon-help:before {
+	content: "\e60a";
+}
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+
+.icon-promo:before {
+	content: "\e61a";
+}
+.icon-arrow-up:before {
+	content: "\e61b";
+}
+.icon-arrow-down:before {
+	content: "\e61c";
+}
+
+.icon-cloudy:before {
+	content: "\e619";
+}
+.icon-iconmonstr-checkout-9-icon:before {
+	content: "\e620";
+}
+.icon-iconmonstr-checkout-8-icon:before {
+	content: "\e621";
+}
+.icon-iconmonstr-tv-7-icon:before {
+	content: "\e622";
+}
+.icon-bed1:before {
+	content: "\e600";
+}
+.icon-drink:before {
+	content: "\e604";
+}
+.icon-notice:before {
+	content: "\e623";
+}
+.icon-coffee:before {
+	content: "\e606";
+}
+.icon-plus:before {
+	content: "\e60c";
+}
+.icon-minus:before {
+	content: "\e60e";
+}
+.icon-checkmark:before {
+	content: "\e60f";
+}
+.icon-cancel:before {
+	content: "\e610";
+}
+.icon-location:before {
+	content: "\e611";
+}
+.icon-direction:before {
+	content: "\e612";
+}
+.icon-map:before {
+	content: "\e613";
+}
+.icon-microwave:before {
+	content: "\e607";
+}
+.icon-refrigerator:before {
+	content: "\e608";
+}
+.icon-key:before {
+	content: "\e609";
+}
+.icon-info:before {
+	content: "\e60a";
+}
+.icon-phone:before {
+	content: "\e60b";
+}
+.icon-user:before {
+	content: "\e614";
+}
+.icon-spinner:before {
+	content: "\e615";
+}
+.icon-cog:before {
+	content: "\e616";
+}
+.icon-cog2:before {
+	content: "\e617";
+}
+.icon-arrow-right:before {
+	content: "\e618";
+}
+.icon-arrow-left:before {
+	content: "\e60d";
+}
+.icon-location2:before {
+	content: "\e601";
+}
+.icon-food:before {
+	content: "\e603";
+}
+.icon-bubbles:before {
+	content: "\e602";
+}
+.icon-glass2:before {
+	content: "\f000";
+}
+.icon-search:before {
+	content: "\f002";
+}
+.icon-envelope-o:before {
+	content: "\f003";
+}
+.icon-heart:before {
+	content: "\f004";
+}
+.icon-star:before {
+	content: "\f005";
+}
+.icon-check:before {
+	content: "\f00c";
+}
+.icon-times:before {
+	content: "\f00d";
+}
+.icon-chevron-left:before {
+	content: "\f053";
+}
+.icon-chevron-right:before {
+	content: "\f054";
+}
+.icon-gift:before {
+	content: "\f06b";
+}
+.icon-comment:before {
+	content: "\f075";
+}
+.icon-menu:before {
+	content: "\f0c9";
+}
+.icon-suitcase:before {
+	content: "\f0f2";
+}
+.icon-bell-o:before {
+	content: "\f0f3";
+}
+.icon-gittip:before {
+	content: "\f184";
+}
+.icon-cart:before {
+	content: "\e61f";
+}
+.icon-weather-partly-sunny:before {
+	content: "\e605";
+}
+
+

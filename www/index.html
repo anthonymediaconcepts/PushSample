@@ -1,146 +1,230 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>com.PhoneGap.c2dm</title>
-    </head>
-    <body>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->       
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <title>Jasmine Front Desk</title>
         
-        <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript" charset="utf-8" src="jquery_1.5.2.min.js"></script>
-        <script type="text/javascript" src="PushNotification.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/updateStyling.css">
+        <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body class="home" >
+        <div data-role="page" class="app page-content pullToRefresh" id="homepage">
+            <div data-role="header" id="header">
+            
+            	<div id="content-header"> 
+                <!--START COMPONENT:1388 (6ms) -->    
+                <div class="frontdesk" id="logo"><a href="index.html" class="logoLink inactive" ><img src="img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+				<!--<nav class="home frontdesk" id="nav-mini">-->
+                <nav class="frontdesk" id="nav-mini">
+                  <h2 class="hidden">Main Navigation</h2>
+                  <a href="#content-header" class="hidden">Skip navigation</a>
+                  <ul class="nav nav-pills ">
+                    <li class="nav-menu "><a class="icon-large icon-grid icon-menu hidden" href="index.html" >Menu</a></li>
+                    <li class="nav-account nav-right"><a class="icon-large icon-account" href="myaccount.html" data-transition="flip">My Account</a></li>
+                  </ul>
+                </nav>
+                <div class="frontdesk-logged-in hidden">
+                  <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+                  <ul class="user-options">
+                    <li><a href="#" onClick="logout();" title="Logout">Logout</a></li>
+                    <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+                  </ul>
+                </div>
+                <!--END COMPONENT:1388--> 
+              </div>
+  
+            </div>
+            
+            <div data-role="content" id="container">
+
+				<div id="main">  
+                	<div id="content-center">                
+                        <div class="home-screen ">
+                          <div class="home-screen-container">
+                            <div class="home-screen-content">
+                              <h2>Welcome to Jasmine Hotel</h2>
+                              <a class="btn" href="checkin.html" title="Check In" data-transition="flip">Check in</a>
+                              <div class="help-con"> <a class="help-link" href="#">
+                                <icon class="icon icon-help"></icon>
+                                <span>Learn more about the App</span></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="menu widget-container hidden">
+                          <h2 class="article-head frontdesk-head">Welcome to Jasmine Hotel</h2>
+                          <div id="pull-to-refresh">
+                            <div class="pull-to-refresh-content">
+                              <div id="pullDown" class="invisible"> <span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span> </div>
+                              <div class="banner home-banner-screen">
+                                <div class="homepage home-screen-content inner">
+                                  <div class="image"><img src="css/img/homepage-banner-02.jpg" alt="" title=""></div>
+                                  <h2 class="hidden"><span>Welcome to Jasmine Hotel</span></h2>
+								  <!---------------------------------->
+									<div class="banner-content">
+                                            <span class="welcome-user">Hi! <span id="userName2" >John Bowen</span></span>
+                                            <span class="welcome-message">
+												<span class="points-msg">Checked in at Room 512</span>
+                                            </span>
+                                    </div>
+								  <!---------------------------------->
+                                    
+
+                                </div>
+                              </div>
+                                
+                            <!--
+
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"About Jasmine Hotel", iconClass:"icon-info"},
+                {id:"", slideType:"slide", uri:"pages/rooms.html", title:"Rooms & Suites", iconClass:"icon-bed1"},
+                {id:"", slideType:"slide", uri:"pages/restaurants.html", title:"Restaurants & Bars", iconClass:"icon-coffee"},
+                {id:"", slideType:"slide", uri:"pages/facilities.html", title:"Facilities", iconClass:"icon-refrigerator"},
+                {id:"", slideType:"slide", uri:"pages/find_my_way.html", title:"Find My Way", iconClass:"icon-location"},
+                {id:"", slideType:"slide", uri:"pages/weather.html", title:"Weather", iconClass:"icon-cloudy"},
+                {id:"", slideType:"slide", uri:"pages/offers.html", title:"Promotions", iconClass:"icon-gift"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Rooms Service", iconClass:"icon-food"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Front Desk", iconClass:"icon-key"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Contact Us", iconClass:"icon-phone"},
+            
+                            -->    
+
+                              <nav id="nav-frontdesk" class="frontdesk-content widget">
+                                <h2 class="hidden">Front Desk Navigation</h2>
+
+								<i class="icon icon-more" ></i>
+
+                                <ul class="nav nav-list nav-list-frontdesk">
+                                  <li id=""><a data-transition="slide" href="pages/aboutpage.html" title="About Jasmine Hotel"><i class="icon icon-info"></i> <span class="title">About Jasmine Hotel</span></a></li>  
+                                    
+                                    <li id=""><a data-transition="slide" href="frontdesk/messages.html" title="My Messsages"><i class="icon icon-bubbles"></i> <span class="title">My Messsages <span class="badge count">0</span><span class="tip"></span></span></a></li>
+                                    
+                                    <li id=""><a data-transition="slide" href="checkout.html" title="Checkout"><i class="icon icon-iconmonstr-checkout-8-icon"></i> <span class="title">Bill Summary / Checkout</span></a></li>
+                                    
+                                  <!--<li id=""><a data-transition="slide" href="pages/rooms.html" title="Rooms & Suites"><i class="icon icon-bed1"></i> <span class="title">Rooms & Suites</span></a></li>-->
+                                  <li id=""><a data-transition="slide" href="pages/restaurants.html" title="Restaurants & Bars"><i class="icon icon-coffee"></i> <span class="title">Restaurants & Bars</span></a></li>
+                                  <!--<li id=""><a data-transition="slide" href="frontdesk/housekeeping.html" title="House Keeping"><i class="icon icon-sweeper icon-housekeeping"></i> <span class="title">House Keeping</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/concierge.html" title="Concierge"><i class="icon icon-bell icon-concierge"></i> <span class="title">Concierge</span></a></li>-->
+                                  <li id=""><a data-transition="slide" href="frontdesk/findmyway/index.html" title="Find My Way"><i class="icon icon-beacon icon-location"></i> <span class="title">Find My Way</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/concierge.html" title="Concierge"><i class="icon icon-food icon-bell-o"></i> <span class="title">Concierge</span></a></li>
+                                    <li id=""><a data-transition="slide" href="frontdesk/room_service.html" title="Room Service"><i class="icon icon-food icon-roomservice"></i> <span class="title">Room Service</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/facilities.html" title="Facilities"><i class="icon icon-iconmonstr-tv-7-icon"></i> <span class="title">Facilities</span></a></li>
+                                  <li id=""><a data-transition="slide" href="frontdesk/loyalty.html" title="Loyalty"><i class="icon icon-gift icon-loyalty"></i> <span class="title">Loyalty</span></a></li>
+								  <li id=""><a data-transition="slide" href="frontdesk/offers.html" title="Promotions"><i class="icon icon-heart"></i> <span class="title">Promotions</span></a></li>
+                                </ul>
+                              </nav>
+                              <div id="pullUp" class="invisible"></div>
+                            </div>
+                          </div>
+                          <!--END COMPONENT:1333--> 
+                        </div>
+					</div>
+            
+				</div>
+			</div>
+ 
+        </div> <!-- end page -->
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>        
+        <script type="text/javascript">
+            app.initialize();
+        </script>        
+        <script src="js/plugins/jquery/jquery-1.9.1.min.js"></script>
+        <script src="js/plugins/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>        
+        <script type="text/javascript" src="js/jasmine/html5support.js"></script>        
+        <script type="text/javascript" src="js/jasmine/jQuerySupportingFunctionsForjQuery1.7.js"></script>	
+    	<script type="text/javascript" src="js/plugins/iscroll.js"></script> 
+	    <script type="text/javascript" src="js/jasmine/frontdeskUtils.js"></script>
+        <script type="text/javascript" src="js/jasmine/ajaxUtils.js"></script>
+        <!--<script type="text/javascript" src="js/google/google-map-api.js"></script> -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=en&libraries=weather,places"></script>
+		<script type="text/javascript" src="js/phonegap.js"></script>
+		<script type="text/javascript">
+		
+		$(function() {			
+			
+			$("#homepage .icon-grid").click(function(event) {
+				event.preventDefault();
+				showWidgetNav();
+				
+			});
+			
+			if ( window.localStorage.getItem("username") != null )
+				{
+				uxn = window.localStorage.getItem("uxn");	
+				uxp = window.localStorage.getItem("uxp");
+				$(".icon-grid.icon-menu").removeClass("hidden");
+			
+				loadMessageData();
+			}
+			
+		});
+		
+		var refreshTime = 60000;
+	
+		var myScroll,
+			pullDownEl, pullDownOffset,
+			generatedCount = 10;
+			
+			$('.pullDownIcon').html('&#xe615;');
+			function pullDownAction () {
+			setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+				loadMessageData();
+				myScroll.refresh();// Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		
+	
+		</script> 
+		<script type="text/javascript" src="js/google/jsapi.js"></script>
+        <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>-->
+		<script type="text/javascript" src="js/jasmine/googleJQueryVisualizationHelper.js"></script>
+		<script type="text/javascript">
+			google.load('visualization', '1', {'packages': ['table', 'map']});
+		</script>
+        <script type='text/javascript' src='js/jasmine/data/component_1285.js'></script>
+		<script type='text/javascript' src='js/jasmine/data/component_1284.js'></script>                                
+        <script type="text/javascript" src="js/jasmine/googlemap-util.js"></script>
+        <script type="text/javascript" src="js/jasmine/locate.js"></script>
+        <script type="text/javascript" src="js/jasmine/init.js"></script>
+        <script type="text/javascript" src="js/jasmine/infobox.js"></script>
+        <script type="text/javascript" src="js/addCartFunction.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+        <script type="text/javascript" src="plugins/PushNotification.js"></script>
+        <script type="text/javascript" src="plugins/logger.js"></script>
+        <script type="text/javascript" src="plugins/console-via-logger.js"></script>
+        
+		<script type="text/javascript" src="js/redeemItems.js"></script>
+		
+        
+        <script type="text/javascript" src="js/plugins/bootstrap.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap-modal.js"></script>
         
         <script type="text/javascript">
-            var pushNotification;
-            
-            function onDeviceReady() {
-                $("#app-status-ul").append('<li>deviceready event received</li>');
-                
-				document.addEventListener("backbutton", function(e)
-				{
-                	$("#app-status-ul").append('<li>backbutton event received</li>');
-  					
-      				if( $("#home").length > 0)
-					{
-						// call this to get a new token each time. don't call it to reuse existing token.
-						//pushNotification.unregister(successHandler, errorHandler);
-						e.preventDefault();
-						navigator.app.exitApp();
-					}
-					else
-					{
-						navigator.app.backHistory();
-					}
-				}, false);
-			
-				try 
-				{ 
-                	pushNotification = window.plugins.pushNotification;
-                	if (device.platform == 'android' || device.platform == 'Android') {
-						$("#app-status-ul").append('<li>registering android</li>');
-                    	pushNotification.register(successHandler, errorHandler, {"senderID":"661780372179","ecb":"onNotificationGCM"});		// required!
-					} else {
-						$("#app-status-ul").append('<li>registering iOS</li>');
-                    	pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
-                	}
-                }
-				catch(err) 
-				{ 
-					txt="There was an error on this page.\n\n"; 
-					txt+="Error description: " + err.message + "\n\n"; 
-					alert(txt); 
-				} 
-            }
-            
-            // handle APNS notifications for iOS
-            function onNotificationAPN(e) {
-                if (e.alert) {
-                     $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
-                     navigator.notification.alert(e.alert);
-                }
-                    
-                if (e.sound) {
-                    var snd = new Media(e.sound);
-                    snd.play();
-                }
-                
-                if (e.badge) {
-                    pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
-                }
-            }
-            
-            // handle GCM notifications for Android
-            function onNotificationGCM(e) {
-                $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
-                
-                switch( e.event )
-                {
-                    case 'registered':
-					if ( e.regid.length > 0 )
-					{
-						$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
-						// Your GCM push server needs to know the regID before it can push to this device
-						// here is where you might want to send it the regID for later use.
-						console.log("regID = " + e.regid);
-					}
-                    break;
-                    
-                    case 'message':
-                    	// if this flag is set, this notification happened while we were in the foreground.
-                    	// you might want to play a sound to get the user's attention, throw up a dialog, etc.
-                    	if (e.foreground)
-                    	{
-							$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
-							
-							// if the notification contains a soundname, play it.
-							var my_media = new Media("/android_asset/www/"+e.soundname);
-							my_media.play();
-						}
-						else
-						{	// otherwise we were launched because the user touched a notification in the notification tray.
-							if (e.coldstart)
-								$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
-							else
-							$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
-						}
-							
-						$("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
-						$("#app-status-ul").append('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
-                    break;
-                    
-                    case 'error':
-						$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
-                    break;
-                    
-                    default:
-						$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
-                    break;
-                }
-            }
-            
-            function tokenHandler (result) {
-                $("#app-status-ul").append('<li>token: '+ result +'</li>');
-                // Your iOS push server needs to know the token before it can push to this device
-                // here is where you might want to send it the token for later use.
-            }
-			
-            function successHandler (result) {
-                $("#app-status-ul").append('<li>success:'+ result +'</li>');
-            }
-            
-            function errorHandler (error) {
-                $("#app-status-ul").append('<li>error:'+ error +'</li>');
-            }
-            
-			document.addEventListener('deviceready', onDeviceReady, true);
-
-         </script>
-		<div id="home">
-			<div id="app-status-div">
-				<ul id="app-status-ul">
-					<li>Cordova PushNotification Plugin Demo</li>
-				</ul>
-			</div>
-		</div>
+        var menuArrData = {
+            navigation :[
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"About Jasmine Hotel", iconClass:"icon-info"},
+                {id:"", slideType:"slide", uri:"pages/rooms.html", title:"Rooms & Suites", iconClass:"icon-bed1"},
+                {id:"", slideType:"slide", uri:"pages/restaurants.html", title:"Restaurants & Bars", iconClass:"icon-coffee"},
+                {id:"", slideType:"slide", uri:"pages/facilities.html", title:"Facilities", iconClass:"icon-refrigerator"},
+                {id:"", slideType:"slide", uri:"pages/find_my_way.html", title:"Find My Way", iconClass:"icon-location"},
+                {id:"", slideType:"slide", uri:"pages/weather.html", title:"Weather", iconClass:"icon-cloudy"},
+                {id:"", slideType:"slide", uri:"pages/offers.html", title:"Promotions", iconClass:"icon-gift"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Rooms Service", iconClass:"icon-food"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Front Desk", iconClass:"icon-key"},
+                {id:"", slideType:"slide", uri:"pages/aboutpage.html", title:"Contact Us", iconClass:"icon-phone"},
+            ]
+        };
+       
+        
+        </script>
+        
+		
     </body>
 </html>

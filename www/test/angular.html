@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="jasmineApp">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>  
+    <script src="js/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/angular/ngSanitize/sanitize.js" type="text/javascript"></script>
+    <script src="js/controller.js" type="text/javascript"></script>
+</head>
+
+
+
+<body ng-controller="PageCtrl">
+    <p>Total user list: {{usersArrData.length}}</p>
+    <ul>
+        <li ng-repeat="usersArrData in usersArrData" >
+          {{usersArrData.name}} {{usersArrData.lastname}}
+        </li>
+    </ul>
+    
+    
+    
+</body> 
+</html>

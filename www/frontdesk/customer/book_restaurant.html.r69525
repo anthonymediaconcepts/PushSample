@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />      
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <title>Bill Summary Checkout</title>
+    </head>
+    <body>
+        <div data-role="page" class="app page-content has-iScroll" id="bookRestaurant" >
+        
+        <!--Header-->
+        <div data-role="header" id="header" >	
+            <div id="content-header"> 
+
+                <div class="frontdesk" id="logo" ><a href="../../index.html" class="logoLink" data-direction="reverse" data-transition="flip"><img src="../../img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+                    <nav class="frontdesk" id="nav-mini">
+                        <h2 class="hidden">Main Navigation</h2>
+                        <a href="#content-header" class="hidden">Skip navigation</a>
+                        <ul class="nav nav-pills ">
+                          <li class="nav-back"><a class="icon-large icon-back" href="../index.html" data-rel="back" data-transition="flip" >Back</a></li>
+                          <li class="nav-menu "><a class="icon-large icon-grid icon-menu" href="../../index.html" data-direction="reverse" data-transition="flip">Menu2</a></li>
+                          <li class="nav-account nav-right"><a class="icon-large icon-account" href="../../myaccount.html" data-direction="reverse" data-transition="flip">My Account</a></li>
+                        </ul>
+                    </nav>
+                    <div class="frontdesk-logged-in hidden">
+                        <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+                            <ul class="user-options">
+                              <li><a href="#" onClick="logout();" class="jsLogout" title="Logout">Logout</a></li>
+                              <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+                            </ul>
+                    </div>
+             </div>
+		</div>
+		<!--Header End-->
+
+		<div data-role="content" id="container" >
+        	<div id="main">  
+                <div id="content-center">    
+                    <div id="pull-to-refresh-bookRestaurant" class="pRefresh">
+                      <div class="pull-to-refresh-content">
+                            <div id="pullDown-bookRestaurant" class="pDown invisible" ></div>
+
+                            	<!--START COMPONENT:1373 (8ms) -->
+                                  <div class="form-container frontdesk-content">
+                                        <h2> Book Restaurant </h2>
+                                        <div id="book-a-resto" class="content">
+                                        <h3 class="hide-in-modal">Please make a restaurant booking</h3>
+                                        <form action="/jasmine3.0/jsps/frontdesk/customer/BookRestaurant.jsp" name="Todo" method="post" class="form form-vertical form-todo">
+                                            <input type="hidden" name='tid' value="2">
+                                            <input type="hidden" name='isPosted' value="True">
+                                            <p>This booking will be made for today.</p>
+                                                
+                                            <ul class="form-field-list form-inline">
+                                                <li class="form-field clearthis">
+                                                    <select name="restaurant-name" id="restaurant-name">
+														<option value="">- Select a Restaurant - </option>
+														<option class="restid-1016" value="The Brasserie">The Brasserie</option>
+														<option class="restid-1017" value="French Bistro">French Bistro</option>
+														<option class="restid-1018" value="Rooftop Bar">Rooftop Bar</option></select>
+                                              		<ul id="rest-details"><li class="restid-1016 hidden"><!--<h3>The Brasserie</h3>--><img src="../../img/restaurants/Brasserie-large.jpg" /><p>
+                                       Open for breakfast, lunch and dinner, The Brasserie is your all-day dining venue. Serving up an international buffet spread or an a la carte menu, this spacious glass-walled restaurant on the ground floor is popular with hotel guests for its lively atmosphere.</p>
+									<p>
+                                        <strong>Hours:</strong> 7am &mdash; 11pm<br/>
+                                        <strong>Cuisine:</strong> International
+									</p></li>
+<li class="restid-1017 hidden"><!--<h3>French Bistro</h3>--><img src="../../img/restaurants/FrenchBistro-large.jpg" />
+<p>
+                                       The French Bistro is located on the top floor of the hotel and serves contemporary French cuisine by celebrated chef Francois Moreau.</p>
+									<p>
+									<strong>Hours:</strong> <br/>
+									Lunch 12 &mdash; 3pm<br/>
+									Dinner 6 &mdash; 11pm<br/>
+									<strong>Cuisine:</strong> French
+									</p>
+</li><li class="restid-1018 hidden"><!--<h3>Rooftop Bar</h3>--><img src="../../img/restaurants/rooftopBar-large.jpg" />
+									<p>
+                                       Flanking the infinity pool, the Rooftop Bar is the perfect place for a sunset cocktail. Fresh juices and light snacks are also served throughout the day.</p>
+
+									<p>
+										<strong>Hours:</strong> 8am til late
+									</p>
+</li></ul>
+                                                </li>
+                            
+                                                <li class="form-field"><select name="bookDate" id="bookDate">
+                                                    <option value='2013-07-25'>Today</option><option value='2013-07-26'>Tomorrow</option><option value='2013-07-27'>2013-07-27</option><option value='2013-07-28'>2013-07-28</option><option value='2013-07-29'>2013-07-29</option><option value='2013-07-30'>2013-07-30</option><option value='2013-07-31'>2013-07-31</option><option value='2013-08-01'>2013-08-01</option><option value='2013-08-02'>2013-08-02</option><option value='2013-08-03'>2013-08-03</option><option value='2013-08-04'>2013-08-04</option><option value='2013-08-05'>2013-08-05</option><option value='2013-08-06'>2013-08-06</option><option value='2013-08-07'>2013-08-07</option><option value='2013-08-08'>2013-08-08</option><option value='2013-08-09'>2013-08-09</option><option value='2013-08-10'>2013-08-10</option><option value='2013-08-11'>2013-08-11</option><option value='2013-08-12'>2013-08-12</option><option value='2013-08-13'>2013-08-13</option><option value='2013-08-14'>2013-08-14</option><option value='2013-08-15'>2013-08-15</option><option value='2013-08-16'>2013-08-16</option><option value='2013-08-17'>2013-08-17</option><option value='2013-08-18'>2013-08-18</option><option value='2013-08-19'>2013-08-19</option><option value='2013-08-20'>2013-08-20</option><option value='2013-08-21'>2013-08-21</option><option value='2013-08-22'>2013-08-22</option><option value='2013-08-23'>2013-08-23</option><option value='2013-08-24'>2013-08-24</option><option value='2013-08-25'>2013-08-25</option><option value='2013-08-26'>2013-08-26</option><option value='2013-08-27'>2013-08-27</option><option value='2013-08-28'>2013-08-28</option><option value='2013-08-29'>2013-08-29</option><option value='2013-08-30'>2013-08-30</option><option value='2013-08-31'>2013-08-31</option><option value='2013-09-01'>2013-09-01</option><option value='2013-09-02'>2013-09-02</option><option value='2013-09-03'>2013-09-03</option><option value='2013-09-04'>2013-09-04</option><option value='2013-09-05'>2013-09-05</option><option value='2013-09-06'>2013-09-06</option><option value='2013-09-07'>2013-09-07</option><option value='2013-09-08'>2013-09-08</option><option value='2013-09-09'>2013-09-09</option><option value='2013-09-10'>2013-09-10</option><option value='2013-09-11'>2013-09-11</option><option value='2013-09-12'>2013-09-12</option><option value='2013-09-13'>2013-09-13</option><option value='2013-09-14'>2013-09-14</option><option value='2013-09-15'>2013-09-15</option><option value='2013-09-16'>2013-09-16</option><option value='2013-09-17'>2013-09-17</option><option value='2013-09-18'>2013-09-18</option><option value='2013-09-19'>2013-09-19</option><option value='2013-09-20'>2013-09-20</option><option value='2013-09-21'>2013-09-21</option><option value='2013-09-22'>2013-09-22</option><option value='2013-09-23'>2013-09-23</option><option value='2013-09-24'>2013-09-24</option><option value='2013-09-25'>2013-09-25</option><option value='2013-09-26'>2013-09-26</option><option value='2013-09-27'>2013-09-27</option><option value='2013-09-28'>2013-09-28</option><option value='2013-09-29'>2013-09-29</option><option value='2013-09-30'>2013-09-30</option><option value='2013-10-01'>2013-10-01</option><option value='2013-10-02'>2013-10-02</option><option value='2013-10-03'>2013-10-03</option><option value='2013-10-04'>2013-10-04</option><option value='2013-10-05'>2013-10-05</option><option value='2013-10-06'>2013-10-06</option><option value='2013-10-07'>2013-10-07</option><option value='2013-10-08'>2013-10-08</option><option value='2013-10-09'>2013-10-09</option><option value='2013-10-10'>2013-10-10</option>
+                                                </select></li>
+                            
+                                                <li class="form-field"><select name="no-of-adult" id="no-of-adult">
+                                                    <option value="1">1 Adult</option>
+                                                    <option value="2">2 Adults</option>
+                                                    <option value="3">3 Adults</option>
+                                                    <option value="4">4 Adults</option>
+                                                    <option value="5">5 Adults</option>
+                                                    <option value="6">6 Adults</option>
+                                                </select></li>
+                                                
+                                                <li class="form-field">
+                                                <select name="no-of-child" id="no-of-child">
+                                                    <option value="">0 Children</option>
+                                                    <option value="1 Child">1 Child</option>
+                                                    <option value="2 Children">2 Children</option>
+                                                    <option value="3 Children">3 Children</option>
+                                                    <option value="4 Children">4 Children</option>
+                                                    <option value="5 Children">5 Children</option>
+                                                    <option value="6 Children">6 Children</option>
+                                                </select></li>
+                                                
+                                                <li class="form-field">
+                                                    <select name="timeOfDay" id="timeOfDay">
+                                                    <option value="">- Requested Time - </option>
+                                                    <optgroup label="Lunch">
+                                                    <option value="11:30 am">11:30 am</option><option value="11:45 am">11:45 am</option><option value="12:00 pm">12:00 pm</option><option value="12:15 pm">12:15 pm</option><option value="12:30 pm">12:30 pm</option><option value="12:45 pm">12:45 pm</option><option value="1:00 pm">1:00 pm</option><option value="1:15 pm">1:15 pm</option><option value="1:30 pm">1:30 pm</option><option value="1:45 pm">1:45 pm</option><option value="2:00 pm">2:00 pm</option><option value="2:15 pm">2:15 pm</option><option value="2:30 pm">2:30 pm</option>
+                                                    </optgroup>
+                                                    <optgroup label="Dinner">
+                                                    <option value="5:00 pm">5:00 pm</option><option value="5:15 pm">5:15 pm</option><option value="5:30 pm">5:30 pm</option><option value="5:45 pm">5:45 pm</option><option value="6:00 pm">6:00 pm</option><option value="6:15 pm">6:15 pm</option><option value="6:30 pm">6:30 pm</option><option value="6:45 pm">6:45 pm</option><option value="7:00 pm">7:00 pm</option><option value="7:15 pm">7:15 pm</option><option value="7:30 pm">7:30 pm</option><option value="7:45 pm">7:45 pm</option><option value="8:00 pm">8:00 pm</option><option value="8:15 pm">8:15 pm</option><option value="8:30 pm">8:30 pm</option><option value="8:45 pm">8:45 pm</option><option value="9:00 pm">9:00 pm</option><option value="9:15 pm">9:15 pm</option><option value="9:30 pm">9:30 pm</option><option value="9:45 pm">9:45 pm</option><option value="10:00 pm">10:00 pm</option><option value="10:15 pm">10:15 pm</option><option value="10:30 pm">10:30 pm</option>
+                                                    </optgroup>
+                                                    </select></li>
+                                                
+                                                
+                                                    <li class="form-field checkbox-field"><input name="NotifyBySMS" id="NotifyBySMS" value="Yes" type="checkbox" > Would you like to be notified by SMS when the request is complete?</li>
+                                                                            
+                                            </ul>
+                                            <div class="form-actions">
+                                           	  <input type="hidden" name="uId" value="" id='uId' />
+                                        		<input type="hidden" name="uIp" value="" id='uIp' />
+                                                <input name="Submit" type="submit" class="btn btn-submit" value="Make Reservation">
+                                            </div>
+                                        </form>
+                                        </div>
+                                </div>
+                            
+
+                            <div id="pullUp-bookRestaurant" class="pUp invisible"></div>
+                        </div><!--pull-to-refresh-content-->
+                    </div><!--pRefresh-->
+                </div>
+			</div><!--main-->
+		</div><!--container-->
+		</div><!-- end page -->
+        
+        <script type="text/javascript" src="../../cordova.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.theme.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../css/updateStyling.css">
+		<script src="../../js/plugins/jquery/jquery-1.9.1.min.js"></script>
+        <script src="../../js/plugins/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>
+                   
+		<script type="text/javascript" src="../../js/jasmine/jQuerySupportingFunctionsForjQuery1.7.js"></script>        
+		<script type="text/javascript" src="../../js/jasmine/html5support.js"></script>
+    	<script type="text/javascript" src="../../js/plugins/iscroll.js"></script> 
+	    <script type="text/javascript" src="../../js/jasmine/frontdeskUtils.js"></script>
+        <script type="text/javascript" src="../../js/phonegap.js"></script>
+        
+    </body>
+</html>

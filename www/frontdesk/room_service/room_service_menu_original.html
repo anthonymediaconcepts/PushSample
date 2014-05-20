@@ -1,0 +1,376 @@
+ <!DOCTYPE html>
+        <html  >
+			<head>
+            <meta charset="utf-8" />
+            <meta name="format-detection" content="telephone=no" />
+            <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->       
+            <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+            <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+            <title>Front Desk Options</title>
+            </head>
+<body>
+<div class="app">
+<div id="container">
+	<header id="header">
+		<div id="content-header">
+            <!--START COMPONENT:1388 (6ms) -->
+            <div class=" frontdesk" id="logo"><a href="../../home.html"><img src="../../img/logo.png" alt="Front Desk Home" /><span class="hidden">Front Desk Home</span></a></div>
+            <nav class=" frontdesk" id="nav-mini">
+                <h2 class="hidden">Main Navigation</h2>
+                <a href="#content-header" class="hidden">Skip navigation</a>
+                <ul class="nav nav-pills ">
+                    <li class="nav-back"><a class="icon-large icon-back" href="../room_service.html" data-rel="back">Back</a></li>
+                    <li class="nav-menu "><a class="icon-large icon-grid icon-menu" href="../../home.html">Menu2</a></li>
+                    <li class="nav-account nav-right"><a class="icon-large icon-account" href="../myaccount.html">My Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="frontdesk-logged-in hidden">
+                <p class="logged-in">Welcome back, <span class="booker-name user-name"></span></p>
+                <ul class="user-options">
+                    <li><a href="logout.html" title="Logout">Logout</a></li>
+                    <li class="hidden"><a href="#" title="Manage Account">Manage Account</a></li>
+                </ul>
+            </div>
+            
+            <!--END COMPONENT:1388-->
+		</div><!--content-header-->
+    </header>
+	<div id="main">
+		<div id="content-left"></div>
+		<div id="content-center">
+        
+        	<div id="pull-to-refresh">
+                <div class="pull-to-refresh-content">
+                
+                    <div id="pullDown" class="invisible"></div>
+                    <!--START COMPONENT:1393 (36ms) -->
+                    <!--END COMPONENT:1393-->
+            <!--START COMPONENT:1373 (8ms) -->
+				
+					<div class="frontdesk-content frontdesk-roomservice column-2">
+                    <form class="form form-horizontal form-cart">
+                    <div class="left-nav">
+                        <div class="frontdesk-concierge-sublist frontdesk-sublist col-2">
+                           <h2 class="head">breakfast</h2>
+                            <ul class="sub-menu">
+                                <li id="ala_carte" class="menu-loader"><a href="javascript:();" class="active">Breakfast à la carte</a></li><li id="breakfast_set" class="menu-loader"><a href="javascript:();">Breakfast Set</a></li><li id="healthy_opt" class="menu-loader"><a href="javascript:();">Healthy options</a></li>
+                            </ul>
+                            <div class="action-submit">
+                                <div class="message-container"><span class="message item-added">Item added to your cart</span></div>
+                                <div class="item-field">
+                                    <label>Cart:</label>
+                                    <span class="value"><span class="cart-item-count">0</span> items</span>
+                                </div>
+                                <div class="item-field">
+                                    <label>Total:</label>
+                                    <span class="value">&pound;<span class="cart-total-price">0.00</span></span>
+                                </div>
+                
+                                <a href="/frontdesk/room_service/view.html" class="btn btn-submit btn-success">View  Your Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-list breakfast">
+                
+                        <ul class="item-list form-fields">
+                            <li id="item-extra-3" class="item menu-item ala_carte odd"><div class="img-con"><img src="../../img/room_services/eggontoast.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Eggs on toast</h3><p>fried, poached or scrambled</p><div class="prod-desc"><p class="item-price">&pound;9.00</p><input class="item_code" value="3" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><div id="extra-3" class="extra-container hidden"><div id="extra-option-1" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of egg</h3>
+                        <ul>
+                            <li><select name="option1">
+                                    <option value="">- Please select -</option>
+                                    <option value="Scrambled">Scrambled</option>
+                                    <option value="Poached">Poached</option>
+                                    <option value="Fried">Fried</option>
+                                    <option value="no eggs">none</option>
+                                </select></li>
+                            <!--<li><input type="radio" name="option1" value="Scrambled egg" id="itemOpt1" checked="checked" /><label for="itemOpt1">Scrambled</label></li>
+                            <li><input type="radio" name="option1" value="Poached egg" id="itemOpt2" /><label for="itemOpt2">Poached</label></li>
+                            <li><input type="radio" name="option1" value="Fried egg" id="itemOpt3" /><label for="itemOpt3">Fried</label></li>-->
+                        </ul>
+                        </div>
+                    </div><div class="modal-btn-container hidden"><input type="button" value="Continue" class="extra-button btn btn-primary" id="btn-extra-3" /></div><input class="item_name" value="Eggs on toast" type="hidden" /><input class="item_code" value="3" type="hidden" /><input class="price-holder" type="hidden" value="9.00" /></div><input class="price-holder" type="hidden" value="9.00" /></li><li id="item-extra-4" class="item menu-item ala_carte even"><div class="img-con"><img src="../../img/room_services/french_toast.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">French toasts</h3><p>Thick slices of bread, soaked in beaten eggs with milk and cinnamon, toasted in a frying pan, and served with butter and maple syrup.</p><div class="prod-desc"><p class="item-price">&pound;9.50</p><input class="item_code" value="4" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="9.50" /></li><li id="item-extra-5" class="item menu-item ala_carte odd"><div class="img-con"><img src="../../img/room_services/omelette3.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Three egg omelette</h3><p>Ham, turkey, Cheddar cheese and vegetables are the filling for these big stuffed omelets that will satisfy appetites of all sizes!</p><div class="prod-desc"><p class="item-price">&pound;10.50</p><input class="item_code" value="5" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="10.50" /></li><li id="item-extra-6" class="item menu-item ala_carte even"><div class="img-con"><img src="../../img/room_services/egg_benedict.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Egg Benedict</h3><p>poached eggs on English muffin with honey roast ham or smoked salmon</p><div class="prod-desc"><p class="item-price">&pound;13.50</p><input class="item_code" value="6" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="13.50" /></li><li id="item-extra-7" class="item menu-item ala_carte odd"><div class="img-con"><img src="../../img/room_services/egg_florentine3.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Egg Florentine</h3><p>poached eggs on English muffin with spinach</p><div class="prod-desc"><p class="item-price">&pound;12.50</p><input class="item_code" value="7" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="12.50" /></li><li id="item-extra-8" class="item menu-item ala_carte even"><div class="img-con"><img src="../../img/room_services/scrambledeggs_with_smoked_salmon.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Scrambled eggs with smoked salmon</h3><p>Enjoy Rachel Allen's luxurious way with scrambled egg, for breakfast, brunch or supper.</p><div class="prod-desc"><p class="item-price">&pound;13.00</p><input class="item_code" value="8" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="13.00" /></li><li id="item-extra-9" class="item menu-item ala_carte odd"><div class="img-con"><img src="../../img/room_services/pancakes_with_the_berry_compote_and_cornish_clotted_cream.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Pancakes with the berry compote and Cornish clotted cream</h3><p>Made delicious, fluffy pancakes from scratch. </p><div class="prod-desc"><p class="item-price">&pound;10.50</p><input class="item_code" value="9" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="10.50" /></li><li id="item-extra-10" class="item menu-item ala_carte even"><div class="img-con"><img src="../../img/room_services/grilled_oak_smoked_kippers.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Grilled oak smoked kippers</h3><p> Cook until crispy either under the grill or in the oven, serve with bread and butter.</p><div class="prod-desc"><p class="item-price">&pound;13.50</p><input class="item_code" value="10" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="13.50" /></li><li id="item-extra-11" class="item menu-item ala_carte odd"><div class="img-con"><img src="../../img/room_services/corn_beef_hash_with_toast.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Corn beef hash with toast</h3><p>a traditional cheap and quick dish</p><div class="prod-desc"><p class="item-price">&pound;10.50</p><input class="item_code" value="11" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="10.50" /></li><li id="item-extra-12" class="item menu-item ala_carte even"><div class="img-con"><img src="../../img/room_services/bakers_basket2.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Baker's basket</h3><p>a selection fresh bread rolls, butter croissants and assorted pastries</p><div class="prod-desc"><p class="item-price">&pound;5.50</p><input class="item_code" value="12" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="5.50" /></li><li id="item-extra-13" class="item menu-item ala_carte odd"><div class="img-con"><img src="../../img/room_services/warm_full_butter_french_crossants.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Warm full butter French croissants</h3><p>The dough is layered with butter, rolled and folded several times in succession</p><div class="prod-desc"><p class="item-price">&pound;3.50</p><input class="item_code" value="13" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="3.50" /></li><li id="item-extra-1" class="item menu-item hidden breakfast_set even"><div class="img-con"><img src="../../img/room_services/completebreakfast.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Complete Breakfast</h3><p>The great Cumberland sausage, smoked bacon, field mushrooms, potato and onion hash, grilled tomato, Basket of baked croissants, toasts and assorted pastries with butter and preserves, and your choice of egg, hot beverage, freshly squeezed juice, and Selection of breakfast cereals.</p><div class="prod-desc"><p class="item-price">&pound;22.50</p><input class="item_code" value="1" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><div id="extra-1" class="extra-container hidden"><div id="extra-option-1" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of egg</h3>
+                        <ul>
+                            <li><select name="option1">
+                                    <option value="">- Please select -</option>
+                                    <option value="Scrambled">Scrambled</option>
+                                    <option value="Poached">Poached</option>
+                                    <option value="Fried">Fried</option>
+                                    <option value="no eggs">none</option>
+                                </select></li>
+                            <!--<li><input type="radio" name="option1" value="Scrambled egg" id="itemOpt1" checked="checked" /><label for="itemOpt1">Scrambled</label></li>
+                            <li><input type="radio" name="option1" value="Poached egg" id="itemOpt2" /><label for="itemOpt2">Poached</label></li>
+                            <li><input type="radio" name="option1" value="Fried egg" id="itemOpt3" /><label for="itemOpt3">Fried</label></li>-->
+                        </ul>
+                        </div>
+                    </div>
+                
+                    <div id="extra-option-2" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of hot beverage</h3>
+                        <ul>
+                            <li><select name="option2">
+                                    <option value="">- Please select -</option>
+                                    <optgroup label="Coffee">
+                                        <option value="Regular Coffee">Regular</option>
+                                        <option value="Decaffeinated Coffee">Decaffeinated</option>
+                                    </optgroup>
+                                    <optgroup label="Tea">
+                                        <option value="Earl Tea">Earl Grey</option>
+                                        <option value="Green Tea">Green</option>
+                                        <option value="English Breakfast">English Breakfast</option>
+                                    </optgroup>
+                                    <optgroup label="Hot Chocolate">
+                                        <option value="Hot Chocolate with milk">with milk</option>                    
+                                        <option value="Hot Chocolate with cream">with cream</option>
+                                    </optgroup>                    
+                                </select>
+                            </li>    
+                        </ul>
+                        </div>
+                    </div>
+                
+                    <div id="extra-option-3" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of freshly squeezed juice</h3>
+                        <ul>
+                            <li>
+                            <select name="option3">
+                                <option value="">- Please select -</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Pink Grapefruit">Pink Grapefruit</option>
+                                <option value="Cranberry">Cranberry</option>
+                            </select>
+                            </li>
+                        </ul>
+                        </div>
+                    </div><div class="modal-btn-container hidden"><input type="button" value="Continue" class="extra-button btn btn-primary" id="btn-extra-1" /></div><input class="item_name" value="Complete Breakfast" type="hidden" /><input class="item_code" value="1" type="hidden" /><input class="price-holder" type="hidden" value="22.50" /></div><input class="price-holder" type="hidden" value="22.50" /></li><li id="item-extra-2" class="item menu-item hidden breakfast_set odd"><div class="img-con"><img src="../../img/room_services/continentalbreakfast.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Continental Breakfast</h3><p>Your choice of hot beverage, your choice of freshly squeezed juice, Basket or baked croissants, toasts and assorted pastries with butter and preserves and Selection of breakfast cereals</p><div class="prod-desc"><p class="item-price">&pound;18.50</p><input class="item_code" value="2" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><div id="extra-2" class="extra-container hidden"><div id="extra-option-1" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of egg</h3>
+                        <ul>
+                            <li><select name="option1">
+                                    <option value="">- Please select -</option>
+                                    <option value="Scrambled">Scrambled</option>
+                                    <option value="Poached">Poached</option>
+                                    <option value="Fried">Fried</option>
+                                    <option value="no eggs">none</option>
+                                </select></li>
+                            <!--<li><input type="radio" name="option1" value="Scrambled egg" id="itemOpt1" checked="checked" /><label for="itemOpt1">Scrambled</label></li>
+                            <li><input type="radio" name="option1" value="Poached egg" id="itemOpt2" /><label for="itemOpt2">Poached</label></li>
+                            <li><input type="radio" name="option1" value="Fried egg" id="itemOpt3" /><label for="itemOpt3">Fried</label></li>-->
+                        </ul>
+                        </div>
+                    </div>
+                
+                    <div id="extra-option-2" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of hot beverage</h3>
+                        <ul>
+                            <li><select name="option2">
+                                    <option value="">- Please select -</option>
+                                    <optgroup label="Coffee">
+                                        <option value="Regular Coffee">Regular</option>
+                                        <option value="Decaffeinated Coffee">Decaffeinated</option>
+                                    </optgroup>
+                                    <optgroup label="Tea">
+                                        <option value="Earl Tea">Earl Grey</option>
+                                        <option value="Green Tea">Green</option>
+                                        <option value="English Breakfast">English Breakfast</option>
+                                    </optgroup>
+                                    <optgroup label="Hot Chocolate">
+                                        <option value="Hot Chocolate with milk">with milk</option>                    
+                                        <option value="Hot Chocolate with cream">with cream</option>
+                                    </optgroup>                    
+                                </select>
+                            </li>    
+                        </ul>
+                        </div>
+                    </div>
+                
+                    <div id="extra-option-3" class="option-container slide">
+                        <div class="slide-content">
+                        <h3>Your choice of freshly squeezed juice</h3>
+                        <ul>
+                            <li>
+                            <select name="option3">
+                                <option value="">- Please select -</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Pink Grapefruit">Pink Grapefruit</option>
+                                <option value="Cranberry">Cranberry</option>
+                            </select>
+                            </li>
+                        </ul>
+                        </div>
+                    </div><div class="modal-btn-container hidden"><input type="button" value="Continue" class="extra-button btn btn-primary" id="btn-extra-2" /></div><input class="item_name" value="Continental Breakfast" type="hidden" /><input class="item_code" value="2" type="hidden" /><input class="price-holder" type="hidden" value="18.50" /></div><input class="price-holder" type="hidden" value="18.50" /></li><li id="item-extra-14" class="item menu-item hidden healthy_opt even"><div class="img-con"><img src="../../img/room_services/egg_white_omelette_with_tomato_olives.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Egg white omelette with tomato, olives, onion</h3><div class="prod-desc"><p class="item-price">&pound;11.50</p><input class="item_code" value="14" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="11.50" /></li><li id="item-extra-15" class="item menu-item hidden healthy_opt odd"><div class="img-con"><img src="../../img/room_services/scottish_porridge_oats_with_skimmed_milk.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Scottish porridge oats with skimmed milk</h3><div class="prod-desc"><p class="item-price">&pound;6.00</p><input class="item_code" value="15" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="6.00" /></li><li id="item-extra-16" class="item menu-item hidden healthy_opt even"><div class="img-con"><img src="../../img/room_services/greek_style_yogurt_with_berry_compote2.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Greek style yoghurt with your choice of honey or berry compote</h3><div class="prod-desc"><p class="item-price">&pound;5.50</p><input class="item_code" value="16" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="5.50" /></li><li id="item-extra-17" class="item menu-item hidden healthy_opt odd"><div class="img-con"><img src="../../img/room_services/breakfast_cheese_plate.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Breakfast cheese plate</h3><div class="prod-desc"><p class="item-price">&pound;5.00</p><input class="item_code" value="17" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="5.00" /></li><li id="item-extra-18" class="item menu-item hidden healthy_opt even"><div class="img-con"><img src="../../img/room_services/glazed_grapefruit5.jpg" class="thumb" /></div><div class="prod-con"><h3 class="item-name">Glazed grapefruit</h3><div class="prod-desc"><p class="item-price">&pound;7.00</p><input class="item_code" value="18" type="hidden" /><input class="btn-submit add-to-cart" value="Add to Order" name="AddtoCart" type="button" /></div></div><input class="price-holder" type="hidden" value="7.00" /></li>
+                        </ul>
+                        <div class="hidden action-submit opaque">
+                                <div class="message-container"><span class="message item-added">Item added to your cart</span></div>
+                            <div class="item-field">
+                                <label>Cart:</label>
+                                <span class="value"><span class="cart-item-count">0</span> items</span>
+                            </div>
+                            <div class="item-field">
+                                <label>Total:</label>
+                                <span class="value">&pound;<span class="cart-total-price">0.00</span></span>
+                            </div>
+                            <a href="/frontdesk/room_service/view.html" class="btn btn-submit btn-success">View  Your Order</a>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                
+                <div id="myModal" class="modal hide fade modal-cart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                
+                    <div class="modal-body show-label">
+                
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button class="btn btn-primary">Continue</button>
+                    </div>
+                </div>
+
+                    
+
+            <!--END COMPONENT:1373-->
+            <!--START COMPONENT:1286 (4ms) -->
+                <section class="google-map-block content">
+                <div id="map_canvas" class="custom"></div>
+                </section>
+                
+                <style type="text/css">
+                .custom#map_canvas {
+                    border: 0 none;
+                    float: none !important;
+                    height: 250px !important;
+                    margin: 0 0 10px;
+                    width: 100% !important;
+                }
+                </style>
+                <!--END COMPONENT:1286-->
+            
+            <div id="pullUp" class="invisible"></div>
+                
+            </div><!--pull-to-refresh-content-->
+        </div><!--pull-to-refresh-->
+            
+        </div>
+		<div id="content-right"></div>
+	</div>
+	<footer id="footer">
+		<div id="content-footer"></div>
+	</footer>
+    <div id="containerBottom"></div>
+    <div id="containerHtmlFooter">
+        
+        
+        <div id="trackerControl">
+            <a id="trackShow" href="javascript:;" title="Show Stats">Show</a>
+            <a id="trackHide" href="javascript:;" title="Hide Stats">Hide</a>
+        </div>
+        
+    </div>
+</div><!--app-->
+
+<script type="text/javascript" src="../../cordova.js"></script>
+<script type="text/javascript" src="../../js/plugins/jquery/jquery.min.js"></script> 
+<script type="text/javascript" src="../../js/plugins/iscroll.js"></script> 
+<script type="text/javascript" src="../../js/jasmine/frontdeskUtils.js"></script>
+<script type="text/javascript">
+$(function() {
+	initScroll();
+});
+
+var myScroll,
+	pullDownEl, pullDownOffset,
+	generatedCount = 10;
+	function pullDownAction () {
+	setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+		//loadMessageData();
+		//myScroll.refresh();// Remember to refresh when contents are loaded (ie: on ajax completion)
+	}, 1000);// <-- Simulate network congestion, remove setTimeout from production!
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);		
+</script>
+
+<script type="text/javascript">
+	var cookieDef = {
+		item:"menu_item"
+	};
+	</script>
+	<script type="text/javascript" src="../../js/jasmine/bootstrap.js" ></script>
+	<script type="text/javascript" src="../../js/jasmine/bootstrap-modal.js"></script>
+	<script type="text/javascript" src="../../js/jasmine/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../../js/addCartFunction.js"></script>
+	<script type="text/javascript">
+	var Items = defaultItemsConfig;
+			Items.itemUnitPrice=".price-holder";
+			Items.itemThumb=".img-con .thumb";
+			Items.itemCode=".item_code";
+			Items.itemAddTrigger=".add-to-cart";
+			Items.itemTotalAmount=".cart-total-price";
+			Items.itemTotalQty=".cart-item-count";
+			Items.itemRowCss=".menu-item";
+			Items.itemName=".item-name";
+			Items.itemExtraContainer=".extra-container";
+			Items.itemCookiePath="/frontdesk";
+			Items.itemCookieTitle="menu_item";
+			Items.formExtraBtn=".extra-button";
+			Items.formExtraContainer=".option-container";
+			Items.formModalId="#myModal";
+			Items.formModalBody=".modal-body";
+			Items.formMessage1="Please select your preference";
+	
+	
+	$(function($) {
+		function fixDiv() {
+		  var $cache = $('.frontdesk-concierge-sublist'); 
+		  if ($(window).scrollTop() > 100) 
+			$cache.css({'position': 'fixed', 'top': '10px'}); 
+		  else
+			$cache.css({'position': 'fixed', 'top': 'auto'});
+		}
+		$(window).scroll(fixDiv);
+		fixDiv();
+	});
+	
+	
+	$(function() {
+		var menuLink = $(".sub-menu .menu-loader a");
+		$(".sub-menu .menu-loader a").click(function(event) {
+			event.preventDefault();
+			var getID = $(this).parent(".menu-loader").attr("id");
+			menuLink.removeClass("active");
+			$(this).addClass("active");
+	
+			$(".menu-list ul > li.item:not(."+getID+")").fadeOut(function() {
+				$(this).addClass("hidden");
+				$(".menu-list ul > li.item."+getID).fadeIn(function() {
+					$(this).removeClass("hidden");
+				});
+			});
+		});
+	
+		addCartFunction(Items);
+	
+		$(".modal-footer .btn-primary").on("click",function() {
+			$(".modal.modal-cart "+Items.formExtraBtn).trigger("click");
+		});
+	
+		var thisMenuObj = $(".frontdesk-concierge-sublist .sub-menu");
+		var outObj = $(".menu-list");
+		var appendObj = false;
+		buildMenuAsSelectBox(thisMenuObj, outObj, appendObj);
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+[
+	{ 	
+        "code" : "M111",
+		"title" : "Jasmine special pizza",
+		"description" : "8&rdquo; thin-crust pizza with fresh tomatoes, basil, rosemary chicken, broccoli, olives and mozzarella.",
+		"img" :{
+			"src" : "../img/loyalty/meal1.jpg",
+			"alt" : "Meal 1",
+			"largeImg": "../img/loyalty/meal1-large.jpg"
+		},
+		"points" : "100"	
+	},
+	{ 	
+        "code" : "M112",
+		"title" : "Fresh fruit cereal",
+		"description" : "Cornflakes with assortment of strawberries, kiwi fruit, mandarin orange and bananas.",
+		"img" :{
+			"src" : "../img/loyalty/meal2.jpg",
+			"alt" : "Meal 2",
+			"largeImg": "../img/loyalty/meal2-large.jpg"
+		},
+		"points" : "150"	
+	},
+	{ 	
+        "code" : "M113",
+		"title" : "Aglio olio prawns",
+		"description" : "Linguine tossed in olive oil, fresh garlic and chilli, accompanied with sautéed prawns.",
+		"img" :{
+			"src" : "../img/loyalty/meal3.jpg",
+			"alt" : "Meal 3",
+			"largeImg": "../img/loyalty/meal3-large.jpg"
+		},
+		"points" : "200"	
+	},
+	{ 	
+        "code" : "M114",
+		"title" : "Fresh Orange Juice",
+		"description" : "Freshly squeezed orange juice.",
+		"img" :{
+			"src" : "../img/loyalty/orangejuice.jpg",
+			"alt" : "Meal 4",
+			"largeImg": "../img/loyalty/orangejuice-large.jpg"
+		},
+		"points" : "200"	
+	}
+]

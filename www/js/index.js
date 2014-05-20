@@ -44,51 +44,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
-        var pushNotification;
-        pushNotification = window.plugins.pushNotification;
-        
-        
-        pushNotification.register(
-        tokenHandler,
-        errorHandler, {
-            "badge":"true",
-            "sound":"true",
-            "alert":"true",
-            "ecb":"onNotificationAPN"
-        });
-        
-        
-        function successHandler (result) {
-            alert('result = ' + result);
-        }
-        
-        function errorHandler (error) {
-            alert('error = ' + error);
-        }
-        
-        function tokenHandler (result) {
-            // Your iOS push server needs to know the token before it can push to this device
-            // here is where you might want to send it the token for later use.
-            alert('device token = ' + result);
-        }
-        
-        function onNotificationAPN (event) {
-            if ( event.alert )
-            {
-                navigator.notification.alert(event.alert);
-            }
-
-            if ( event.sound )
-            {
-                var snd = new Media(event.sound);
-                snd.play();
-            }
-
-            if ( event.badge )
-            {
-                pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, event.badge);
-            }
-        }
+   
         
         //var listeningElement = parentElement.querySelector('.listening');
         //var receivedElement = parentElement.querySelector('.received');
